@@ -1,0 +1,441 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gestión de Conocimientos - VeteriSoft (Wiki en Confluence) · VeteriSoft</title><link rel="stylesheet" href="style.css"><script src="search-data.js" defer></script><script src="app.js" defer></script></head><body><header><a href="index.html" class="brand"><span>V+</span> VeteriSoft</a><span class="header-label">/ &nbsp; Documentación</span><div class="search"><input id="search" type="search" placeholder="Buscar en 23 documentos…" aria-label="Buscar en la documentación"><div id="results" aria-live="polite" hidden></div></div></header><div class="layout"><aside><details open><summary>Biblioteca del proyecto</summary><nav aria-label="Documentos"><a class="start" href="index.html">⌂ &nbsp; Centro de proyecto</a><div class="group">Dirección y alcance</div><a href="doc-01.html">ACTA DE CONSTITUCIÓN DEL PROYECTO</a><a href="doc-02.html">SCOPE STATMENT</a><a href="doc-03.html">WBS-EDT</a><a href="doc-04.html">DICCIONARIO DE LA EDT</a><a href="doc-05.html">PLANES DEL PROYECTO</a><div class="group">Requisitos y calidad</div><a href="doc-06.html">ESPECIFICACIÓN FORMAL DE LOS REQUISITOS (SRS)</a><a href="doc-07.html">TRAZABILIDAD</a><a href="doc-08.html">[ISII-012-26] Modelo de Calidad ISO 25010</a><div class="group">Planificación y seguimiento</div><a href="doc-09.html">TIEMPOS</a><a href="doc-10.html">COSTOS</a><a href="doc-11.html">RIESGOS</a><a href="doc-12.html">GESTIÓN DE COMUNICACIONES Y STAKEHOLDERS</a><a href="doc-13.html">JIRA</a><div class="group">Procesos de gestión</div><a href="doc-14.html">Gestión de Adquisiciones — Selección y Evaluación de Proveedores (Simulación) - VeteriSoft</a><a href="doc-15.html">Gestión y Control de Cambios - VeteriSoft (Simulación)</a><a href="doc-16.html" aria-current="page">Gestión de Conocimientos - VeteriSoft (Wiki en Confluence)</a><a href="doc-17.html">Diferencias entre PMBOK 6ta E, ISO 21500-2012, PMBOK 7ma e ISO 21500-2021 y Metodología Prince2</a><div class="group">Equipo y desarrollo</div><a href="doc-18.html">Matriz de Competencias y Plan de Mejora — VeteriSoft</a><a href="doc-19.html">Plan de Carrera y Desarrollo de Competencias — VeteriSoft</a><a href="doc-20.html">Plan de Carrera y Mejora para Todos los Roles — VeteriSoft</a><a href="doc-21.html">Evaluación de Desempeño 360° - VeteriSoft (Simulación)</a><a href="doc-22.html">Evaluación de Desempeño Multidimensional 360° — VeteriSoft (Simulación)</a></nav></details></aside><main><div class="docbar"><span>DOCUMENTACIÓN / 17 DE 23</span><a href="originales/doc-16.md" download>↓ Markdown original</a></div><article><h1 id="gestión-de-conocimientos--veterisoft-wiki-en-confluence">Gestión de Conocimientos | VeteriSoft (Wiki en Confluence)</h1>
+<h1 id="práctico-nº-10--gestión-de-conocimientos--veterisoft">Práctico N.º 10 — Gestión de Conocimientos | VeteriSoft</h1>
+<p><strong>Ingeniería de Software II · Gestión de Proyectos · Proyecto ISII-006-22 · 27/10/2026 · Versión 1.0</strong></p>
+<p><strong>Estrategia seleccionada (única): Wiki o Base de Conocimientos.</strong> Herramienta de aplicación: espacio compartido de VeteriSoft en Confluence. Este documento distingue los recursos ya existentes de las reglas de gobierno y ejemplos propuestos para el trabajo práctico.</p>
+<h2 id="1-selección-de-la-estrategia">1. Selección de la estrategia</h2>
+<p>Se elige <strong>Wiki o Base de Conocimientos</strong>, una de las alternativas de la consigna. Consiste en un espacio compartido que organiza información por temas, como requisitos, arquitectura, procedimientos, decisiones y preguntas frecuentes. <strong>No se eligen como estrategias independientes</strong> ni un agente de IA ni un registro de lecciones aprendidas; los aprendizajes pueden documentarse como contenido dentro de la wiki.</p>
+<p>Esta opción es pertinente porque VeteriSoft ya utiliza un espacio de Confluence con documentación del acta de constitución, EDT/WBS, SRS, matriz de trazabilidad, riesgos, costos y procedimientos de gestión. El proyecto busca entregar un MVP con gestión de usuarios/mascotas, turnos e historial clínico, por lo que la información debe estar accesible y ser coherente durante el desarrollo.</p>
+<h2 id="2-desarrollo-de-la-estrategia">2. Desarrollo de la estrategia</h2>
+<h3 id="21-objetivo-qué-necesidad-del-equipo-busca-resolver">2.1 Objetivo: ¿qué necesidad del equipo busca resolver?</h3>
+<p>Centralizar y conservar el conocimiento explícito de VeteriSoft para que los integrantes localicen información confiable sin depender exclusivamente de mensajes o de la memoria de una persona. Se busca reducir búsquedas repetidas, decisiones contradictorias, retrabajo y pérdida de contexto al cambiar de sprint o integrante.</p>
+<p><strong>Objetivo SMART propuesto:</strong> durante los próximos dos sprints de aplicación de la estrategia, catalogar el 100 % de los documentos críticos del MVP con título, categoría, responsable, versión y fecha de revisión; lograr que un integrante pueda localizar un requisito y su evidencia relacionada en un máximo de cinco minutos en al menos cuatro de cinco pruebas internas. Estos umbrales son metas sugeridas, no resultados medidos.</p>
+<h3 id="22-información-a-gestionar-qué-conocimientos-y-documentos-se-incluirán">2.2 Información a gestionar: ¿qué conocimientos y documentos se incluirán?</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Categoría</th>
+<th>Contenido y conocimiento</th>
+<th>Ejemplo de VeteriSoft</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gestión del proyecto</td>
+<td>Alcance, objetivos, roles, cronograma, EDT, costos y riesgos</td>
+<td>Acta de Constitución, EDT/WBS, Matriz de Riesgos, Matriz de Costes</td>
+</tr>
+<tr class="even">
+<td>Requisitos</td>
+<td>Necesidades del cliente, requisitos funcionales y no funcionales, aceptación y trazabilidad</td>
+<td>SRS y Matriz de Trazabilidad</td>
+</tr>
+<tr class="odd">
+<td>Arquitectura y datos</td>
+<td>Diseño SaaS multitenant, modelos relacionales, decisiones de seguridad y diagramas</td>
+<td>Documentación técnica prevista por EDT 1.2</td>
+</tr>
+<tr class="even">
+<td>Desarrollo</td>
+<td>Reglas de negocio de usuarios/mascotas, agenda e historia clínica; convenciones y APIs</td>
+<td>Especificaciones del MVP y futuras guías técnicas</td>
+</tr>
+<tr class="odd">
+<td>Calidad y pruebas</td>
+<td>Casos de prueba, resultados, criterios de aceptación, incidencias y UAT</td>
+<td>Actividades QA de EDT 1.6</td>
+</tr>
+<tr class="even">
+<td>Procesos y decisiones</td>
+<td>Procedimientos de cambios, adquisiciones, evaluación de proveedores y acuerdos</td>
+<td>Prácticos 8 y 9 documentados en Confluence</td>
+</tr>
+<tr class="odd">
+<td>Aprendizajes y consultas frecuentes</td>
+<td>Problemas resueltos, explicaciones, decisiones con su fundamento y preguntas frecuentes</td>
+<td>Sección propuesta «FAQ y aprendizajes» dentro de la wiki</td>
+</tr>
+</tbody>
+</table></div>
+<p>La existencia de una categoría en la EDT no implica que todos sus documentos ya estén creados o aprobados. Los materiales faltantes deberán registrarse como pendientes.</p>
+<h3 id="23-herramientas-y-métodos-qué-se-utilizará">2.3 Herramientas y métodos: ¿qué se utilizará?</h3>
+<p><strong>Herramienta principal:</strong> Confluence como repositorio de conocimiento, con páginas jerárquicas, búsqueda, enlaces internos, historial de versiones, comentarios y permisos. <strong>Herramienta complementaria:</strong> el tablero de trabajo y repositorio de código del equipo (GitHub Projects / Git, según su configuración efectiva) para enlazar tickets, entregables y versiones de software. No se propone un segundo repositorio de conocimiento paralelo.</p>
+<p><strong>Método de incorporación:</strong> redactar una página usando plantilla; incluir propósito, contexto, alcance, contenido, referencias, responsable, versión y fecha; revisar antes de declararla vigente; enlazar desde el índice temático; y revisarla cuando cambie el requisito o proceso relacionado. Los borradores y documentos aprobados deben distinguirse explícitamente.</p>
+<h3 id="24-organización-clasificación-identificación-y-catalogación">2.4 Organización: clasificación, identificación y catalogación</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Sección propuesta de la wiki</th>
+<th>Subsecciones</th>
+<th>Ejemplos de identificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>00 · Inicio e índice</td>
+<td>Mapa de contenidos, guía de búsqueda, glosario</td>
+<td>KB-INDEX</td>
+</tr>
+<tr class="even">
+<td>01 · Gestión</td>
+<td>Acta, EDT, tiempos, costos, riesgos y comunicaciones</td>
+<td>GES-001</td>
+</tr>
+<tr class="odd">
+<td>02 · Requisitos</td>
+<td>SRS, RTM, criterios de aceptación</td>
+<td>REQ-001</td>
+</tr>
+<tr class="even">
+<td>03 · Diseño y arquitectura</td>
+<td>Arquitectura, datos, seguridad, UX/UI</td>
+<td>ARQ-001</td>
+</tr>
+<tr class="odd">
+<td>04 · Desarrollo y despliegue</td>
+<td>Módulos, APIs, entornos, configuración y versiones</td>
+<td>DEV-001</td>
+</tr>
+<tr class="even">
+<td>05 · Calidad</td>
+<td>Pruebas, UAT, no conformidades</td>
+<td>QA-001</td>
+</tr>
+<tr class="odd">
+<td>06 · Procedimientos</td>
+<td>Cambios, adquisiciones, proveedores, competencias</td>
+<td>PRO-001</td>
+</tr>
+<tr class="even">
+<td>07 · FAQ y aprendizajes</td>
+<td>Problemas, soluciones, decisiones y lecciones</td>
+<td>FAQ-001</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Convención de título propuesta:</strong> [Categoría] Nombre del documento — VeteriSoft. <strong>Metadatos mínimos:</strong> ID, estado (borrador / en revisión / aprobado / obsoleto), versión, fecha, autor, responsable de revisión, EDT o requisito relacionado, palabras clave y enlaces asociados. La estructura anterior es una propuesta de ordenamiento; no se afirma que todas estas secciones ya existan.</p>
+<h3 id="25-acceso-y-consulta-quiénes-acceden-y-cómo-encuentran-la-información">2.5 Acceso y consulta: ¿quiénes acceden y cómo encuentran la información?</h3>
+<p>El equipo del proyecto consulta la documentación general según los permisos de su cuenta en Confluence. El PM y los responsables de cada área revisan los contenidos que les competen. El cliente o patrocinador puede recibir acceso de lectura a documentación aprobada relevante para su validación, si la organización lo autoriza. Las páginas que contengan datos personales, credenciales, información clínica real o detalles sensibles deben tener acceso restringido y no publicarse en la wiki general.</p>
+<p><strong>Formas de recuperación:</strong> (1) índice por categorías; (2) búsqueda por nombre, ID o palabra clave; (3) enlaces entre SRS, RTM, EDT y pruebas; (4) etiquetas por módulo como «turnos», «historia-clinica» o «multitenant»; (5) navegación hacia el documento vigente desde la página de inicio. Antes de utilizar información se comprueban estado, versión, fecha de revisión y relaciones.</p>
+<h3 id="26-responsables-carga-revisión-y-mantenimiento">2.6 Responsables: carga, revisión y mantenimiento</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Responsabilidad</th>
+<th>Asignación propuesta</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Coordinación y aprobación del procedimiento</td>
+<td>Responsable del proyecto según la organización documentada</td>
+<td>Priorizar revisiones, controlar vigencia y resolver inconsistencias</td>
+</tr>
+<tr class="even">
+<td>Redacción y actualización de contenido</td>
+<td>Integrante responsable de cada entregable (por designar)</td>
+<td>Documentar cambios y adjuntar evidencias</td>
+</tr>
+<tr class="odd">
+<td>Revisión cruzada</td>
+<td>Otro integrante del equipo, por designar</td>
+<td>Verificar claridad, exactitud y trazabilidad</td>
+</tr>
+<tr class="even">
+<td>Colaboración en la wiki</td>
+<td>Colaboradores del proyecto según la organización documentada</td>
+<td>Proponer correcciones y aportar documentación según tareas asignadas</td>
+</tr>
+<tr class="odd">
+<td>Validación funcional</td>
+<td>Cliente / representante clínico autorizado</td>
+<td>Confirmar requisitos y decisiones que requieren aceptación del negocio</td>
+</tr>
+</tbody>
+</table></div>
+<p>El acta confirma los nombres y roles generales, pero <strong>no establece una designación formal de bibliotecario de conocimiento ni asigna propiedad de cada documento</strong>. La tabla describe un esquema de gobierno sugerido, no responsabilidades ya aceptadas.</p>
+<h3 id="27-actualización-cuándo-se-incorpora-o-modifica-información">2.7 Actualización: ¿cuándo se incorpora o modifica información?</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Disparador</th>
+<th>Acción de actualización</th>
+<th>Plazo sugerido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Requisito nuevo o cambio aprobado</td>
+<td>Actualizar SRS, RTM, criterios y enlaces</td>
+<td>Antes de iniciar implementación</td>
+</tr>
+<tr class="even">
+<td>Decisión de arquitectura</td>
+<td>Registrar fundamento, alternativa elegida y versión</td>
+<td>En el sprint de la decisión</td>
+</tr>
+<tr class="odd">
+<td>Incidencia resuelta con aprendizaje reutilizable</td>
+<td>Agregar FAQ o solución comprobada</td>
+<td>Antes de cerrar el ticket</td>
+</tr>
+<tr class="even">
+<td>Entrega de módulo o prueba UAT</td>
+<td>Actualizar manual, evidencia y estado</td>
+<td>Antes de declarar el entregable terminado</td>
+</tr>
+<tr class="odd">
+<td>Cierre de sprint</td>
+<td>Revisar enlaces rotos, pendientes y páginas obsoletas</td>
+<td>Una vez por sprint</td>
+</tr>
+<tr class="even">
+<td>Cambio de integrante o transferencia</td>
+<td>Verificar accesos, responsables y documentación clave</td>
+<td>Durante la transición</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Control de calidad propuesto:</strong> una página pasa a «aprobada» solo si su contenido está revisado, es localizable, tiene responsable y referencias válidas. Una versión obsoleta se conserva para trazabilidad pero se identifica para evitar su uso operativo.</p>
+<h2 id="3-ejemplo-concreto-de-aplicación-de-la-wiki-en-veterisoft">3. Ejemplo concreto de aplicación de la wiki en VeteriSoft</h2>
+<h3 id="situación-localizar-el-requisito-del-historial-clínico">Situación: localizar el requisito del historial clínico</h3>
+<p><strong>Escenario didáctico:</strong> un integrante necesita determinar qué información debe consultar antes de implementar la visualización del historial clínico de una mascota y cómo comprobar su relación con requisitos y pruebas. El recorrido es un ejemplo de uso, no un registro de una consulta real.</p>
+<ol type="1">
+<li><strong>Ingreso:</strong> abre el espacio VeteriSoft en Confluence y busca «historial clínico» o «HCE».</li>
+<li><strong>Localización:</strong> desde el índice de Requisitos accede a la SRS — Especificación de Requisitos y localiza los apartados pertinentes al módulo.</li>
+<li><strong>Verificación:</strong> comprueba versión, fecha y estado de la SRS; si la información no está aprobada o es ambigua, registra una consulta al responsable en lugar de asumir una regla no documentada.</li>
+<li><strong>Trazabilidad:</strong> abre la Matriz de Trazabilidad y busca el requisito correspondiente para identificar su origen y relaciones con entregables o pruebas. El identificador exacto debe obtenerse del documento, no inventarse.</li>
+<li><strong>Contexto:</strong> consulta la EDT/WBS, particularmente 1.3.1 Historia Clínica Electrónica, para entender el entregable previsto.</li>
+<li><strong>Uso:</strong> prepara su tarea y casos de prueba utilizando las fuentes vigentes, enlazando las páginas en el ticket del sprint.</li>
+<li><strong>Retroalimentación:</strong> si descubre una contradicción o duda, deja comentario o solicita revisión y se registra la corrección con nueva versión.</li>
+</ol>
+<h3 id="ejemplo-de-registro-de-consulta-ficticio">Ejemplo de registro de consulta (ficticio)</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Consulta</td>
+<td>KB-CONS-001 (simulada)</td>
+</tr>
+<tr class="even">
+<td>Pregunta</td>
+<td>¿Dónde se documentan los requisitos de visualización del historial clínico?</td>
+</tr>
+<tr class="odd">
+<td>Fuentes recuperadas</td>
+<td>SRS, RTM y EDT 1.3.1</td>
+</tr>
+<tr class="even">
+<td>Procedimiento</td>
+<td>Búsqueda → verificación de vigencia → trazabilidad → enlace en tarea</td>
+</tr>
+<tr class="odd">
+<td>Resultado</td>
+<td>Se identifica la documentación a revisar y se evita decidir requisitos por memoria</td>
+</tr>
+<tr class="even">
+<td>Aprendizaje</td>
+<td>Agregar enlace directo desde índice del módulo HCE a SRS y RTM</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Valor del ejemplo:</strong> la estrategia no solo almacena documentos; permite recuperar una fuente, evaluar su vigencia y relacionarla con la tarea concreta, conservando el conocimiento para el siguiente integrante.</p>
+<h2 id="4-beneficios-esperados-y-dificultades-posibles">4. Beneficios esperados y dificultades posibles</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Beneficio esperado</th>
+<th>Cómo se evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Menor tiempo de búsqueda</td>
+<td>Pruebas de recuperación de requisitos y tiempo medio de localización</td>
+</tr>
+<tr class="even">
+<td>Menos retrabajo por información contradictoria</td>
+<td>Registro de consultas, aclaraciones y correcciones</td>
+</tr>
+<tr class="odd">
+<td>Mejor incorporación de nuevos integrantes</td>
+<td>Guía de inicio y acceso a documentos clave</td>
+</tr>
+<tr class="even">
+<td>Mayor trazabilidad de decisiones y entregables</td>
+<td>Enlaces entre requisitos, EDT, tickets, pruebas y versiones</td>
+</tr>
+<tr class="odd">
+<td>Continuidad del conocimiento</td>
+<td>Responsables, historial y material reutilizable por sprint</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Dificultad</th>
+<th>Riesgo</th>
+<th>Medida de mitigación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Documentación desactualizada</td>
+<td>Implementar requisitos obsoletos</td>
+<td>Revisión por sprint, fecha y estado de vigencia</td>
+</tr>
+<tr class="even">
+<td>Falta de tiempo para documentar</td>
+<td>Conocimiento queda en conversaciones</td>
+<td>Incluir documentación en definición de terminado</td>
+</tr>
+<tr class="odd">
+<td>Duplicación de páginas</td>
+<td>Confusión sobre fuente oficial</td>
+<td>Índice único y enlaces a fuente canónica</td>
+</tr>
+<tr class="even">
+<td>Permisos inadecuados</td>
+<td>Exposición de datos o imposibilidad de consultar</td>
+<td>Permisos por rol y revisión de accesos</td>
+</tr>
+<tr class="odd">
+<td>Clasificación inconsistente</td>
+<td>La búsqueda pierde eficacia</td>
+<td>Plantillas, categorías y metadatos comunes</td>
+</tr>
+<tr class="even">
+<td>Dependencia de la herramienta</td>
+<td>Dificultad de acceso o migración</td>
+<td>Exportaciones periódicas y respaldos autorizados</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="41-indicadores-de-seguimiento-propuestos">4.1 Indicadores de seguimiento propuestos</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Indicador</th>
+<th>Cálculo</th>
+<th>Meta académica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cobertura de catalogación</td>
+<td>Documentos críticos catalogados / documentos críticos identificados × 100</td>
+<td>100 % en 2 sprints</td>
+</tr>
+<tr class="even">
+<td>Éxito de recuperación</td>
+<td>Consultas resueltas en ≤5 min / consultas de prueba × 100</td>
+<td>≥80 % (4 de 5)</td>
+</tr>
+<tr class="odd">
+<td>Vigencia</td>
+<td>Páginas críticas revisadas dentro del período / páginas críticas × 100</td>
+<td>100 % al cierre del sprint</td>
+</tr>
+<tr class="even">
+<td>Trazabilidad</td>
+<td>Documentos críticos con enlaces válidos a fuentes relacionadas / total crítico × 100</td>
+<td>≥90 %</td>
+</tr>
+</tbody>
+</table></div>
+<p>Estos indicadores son propuestas de evaluación de la estrategia. No se dispone de mediciones reales y no se presentan como logros ya alcanzados.</p>
+<h2 id="5-conclusión">5. Conclusión</h2>
+<p>La <strong>Wiki o Base de Conocimientos en Confluence</strong> es una estrategia concreta y aplicable al proyecto porque aprovecha la documentación ya disponible y propone reglas de clasificación, acceso, actualización y control de vigencia. El ejemplo del historial clínico demuestra cómo recuperar conocimiento útil y vincularlo con requisitos, entregables y tareas. Su éxito depende de mantener responsables claros y revisar continuamente la información.</p>
+<h2 id="6-correspondencia-con-la-consigna">6. Correspondencia con la consigna</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Punto del práctico</th>
+<th>Respuesta en esta página</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Seleccionar una sola estrategia</td>
+<td>Sección 1 — Wiki o Base de Conocimientos</td>
+</tr>
+<tr class="even">
+<td>2. Objetivo, información, herramientas, organización, acceso, responsables y actualización</td>
+<td>Secciones 2.1 a 2.7</td>
+</tr>
+<tr class="odd">
+<td>3. Ejemplo concreto de recuperación de información</td>
+<td>Sección 3 — Historial clínico</td>
+</tr>
+<tr class="even">
+<td>4. Beneficios y dificultades</td>
+<td>Sección 4 — Beneficios, dificultades y métricas</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="7-fuentes">7. Fuentes</h2>
+<ul>
+<li>Práctico N.º 10 — Ingeniería de Software II (2026), Gestión de Conocimientos, consigna de dos páginas aportada por el estudiante.</li>
+<li>Acta de Constitución de VeteriSoft</li>
+<li>EDT / WBS</li>
+<li>SRS — Requisitos</li>
+<li>Matriz de Trazabilidad</li>
+<li>Gestión de Comunicaciones y Stakeholders</li>
+</ul>
+<h2 id="link-integración-de-la-wiki-y-la-documentación-del-proyecto">🔗 Integración de la wiki y la documentación del proyecto</h2>
+<p><strong>Wiki complementaria de Gestión del Conocimiento:</strong> Abrir VeteriSoft | Wiki de Gestión del Conocimiento.</p>
+<p>La wiki se creó con seis secciones navegables y referencias a las fuentes de Confluence. <strong>Confluence sigue siendo la fuente de verdad documental</strong> para requisitos, acta, EDT y prácticos; La wiki complementaria funciona como catálogo, índice y guía de recuperación. Los vínculos son enlaces manuales y <strong>no constituyen sincronización automática</strong>.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr class="header">
+<th>Sección de la wiki</th>
+<th>Acceso directo</th>
+<th>Contenido vinculado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01 · Gestión del proyecto</td>
+<td>Abrir sección</td>
+<td>Acta, EDT, tiempos, costos, riesgos y comunicaciones</td>
+</tr>
+<tr class="even">
+<td>02 · Requisitos y trazabilidad</td>
+<td>Abrir sección</td>
+<td>SRS y matriz RTM</td>
+</tr>
+<tr class="odd">
+<td>03 · Arquitectura y desarrollo</td>
+<td>Abrir sección</td>
+<td>Diseño previsto, módulos MVP y EDT</td>
+</tr>
+<tr class="even">
+<td>04 · Calidad y pruebas</td>
+<td>Abrir sección</td>
+<td>P12, SRS, RTM y criterios de verificación</td>
+</tr>
+<tr class="odd">
+<td>06 · FAQ y aprendizajes</td>
+<td>Abrir sección</td>
+<td>Ejemplos de consulta y aprendizaje</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="aplicación-al-práctico-10">Aplicación al Práctico 10</h3>
+<p><strong>Estrategia seleccionada:</strong> wiki o base de conocimientos. <strong>Implementación:</strong> Confluence conserva documentos originales y la wiki complementaria ofrece una interfaz de navegación por áreas con enlaces a las fuentes. <strong>Gobierno propuesto:</strong> revisar vigencia, responsable, versión y estado de cada artículo al cierre del sprint; no declarar aprobadas páginas sin validación. <strong>Restricción:</strong> los accesos dependen de los permisos que cada usuario tenga en ambas plataformas; la creación de enlaces no comparte permisos.</p>
+<h2 id="actualización-de-enfoque-para-la-entrega--la-wiki-complementaria--confluence">Actualización de enfoque para la entrega — la wiki complementaria + Confluence</h2>
+<p><strong>Estrategia única elegida: Wiki o Base de Conocimientos.</strong> La implementación actual se presenta mediante la wiki complementaria como interfaz principal de navegación temática, con seis secciones, mientras Confluence conserva los documentos originales y sus versiones. Esta precisión reemplaza las referencias anteriores que describen a Confluence como la herramienta principal de la wiki.</p>
+<p><strong>Objetivo:</strong> centralizar y recuperar información confiable de VeteriSoft sin duplicar las fuentes. <strong>Información:</strong> gestión, SRS, RTM, EDT, arquitectura prevista, calidad, procedimientos y aprendizajes. <strong>Organización:</strong> seis secciones de la wiki complementaria con enlaces directos a documentos de Confluence. <strong>Acceso:</strong> según permisos en ambas plataformas. <strong>Responsables y actualización:</strong> asignación editorial y revisión por sprint propuestas, sujetas a validación del equipo.</p>
+<p><strong>Ejemplo concreto actualizado:</strong> un integrante abre 02 · Requisitos y trazabilidad en la wiki complementaria; desde allí accede a SRS, RTM y EDT para localizar los requisitos y el entregable de historia clínica. Verifica vigencia y registra cualquier duda antes de implementar. Es un escenario didáctico, no una prueba ejecutada.</p>
+<p><strong>Beneficios esperados:</strong> menos tiempo de búsqueda, mejor trazabilidad, incorporación más sencilla y menor retrabajo. <strong>Dificultades:</strong> enlaces rotos, documentos desactualizados, permisos insuficientes, doble mantenimiento y falta de responsables. Se mitigan con fuente documental única, control de vigencia, revisión por sprint y enlaces verificados.</p>
+<p><strong>Nota de consistencia:</strong> esta sección constituye la formulación vigente del P10; los apartados anteriores reflejan el planteo previo a la creación de la wiki en la wiki complementaria. Los enlaces son manuales y no representan sincronización automática.</p>
+<blockquote>
+<p>Copia pública: se conservaron los procedimientos generales; los enlaces de acceso privado y la sección editorial retirada no se incluyen.</p>
+</blockquote>
+</article></main></div></body></html>
