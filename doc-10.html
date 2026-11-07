@@ -1,0 +1,117 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>COSTOS · VeteriSoft</title><link rel="stylesheet" href="style.css"><script src="search-data.js" defer></script><script src="app.js" defer></script></head><body><header><a href="index.html" class="brand"><span>V+</span> VeteriSoft</a><span class="header-label">/ &nbsp; Documentación</span><div class="search"><input id="search" type="search" placeholder="Buscar en 13 documentos…" aria-label="Buscar en la documentación"><div id="results" aria-live="polite" hidden></div></div></header><div class="layout"><aside><details open><summary>Biblioteca del proyecto</summary><nav aria-label="Documentos"><a class="start" href="index.html">⌂ &nbsp; Centro de proyecto</a><div class="group">Dirección y alcance</div><a href="doc-01.html">ACTA DE CONSTITUCIÓN DEL PROYECTO</a><a href="doc-02.html">SCOPE STATMENT</a><a href="doc-03.html">WBS-EDT</a><a href="doc-05.html">PLANES DEL PROYECTO</a><div class="group">Requisitos y calidad</div><div class="group">Planificación y seguimiento</div><a href="doc-09.html">TIEMPOS</a><a href="doc-10.html" aria-current="page">COSTOS</a><a href="doc-11.html">RIESGOS</a><a href="doc-12.html">GESTIÓN DE COMUNICACIONES Y STAKEHOLDERS</a><a href="doc-13.html">JIRA</a><div class="group">Procesos de gestión</div><a href="doc-14.html">Gestión de Adquisiciones — Selección y Evaluación de Proveedores (Simulación) - VeteriSoft</a><a href="doc-15.html">Gestión y Control de Cambios - VeteriSoft (Simulación)</a><a href="doc-17.html">Diferencias entre PMBOK 6ta E, ISO 21500-2012, PMBOK 7ma e ISO 21500-2021 y Metodología Prince2</a></nav></details></aside><main><div class="docbar"><span>DOCUMENTACIÓN / 07 DE 13</span><a href="originales/doc-10.md" download>↓ Markdown original</a></div><article><h1>💹 COSTOS</h1>
+<p>A continuación se presenta la <strong>Matriz de Costes y Justificación Detallada</strong> del proyecto <strong>VeteriSoft</strong> transcrita en formato de texto estandarizado y estructurado.</p>
+<h2><strong>MATRIZ DE COSTES Y JUSTIFICACIÓN DETALLADA DEL PROYECTO VETERISOFT</strong></h2>
+<h3><strong>1. Parámetros Generales de Coste por Criterio de Tiempo y Riesgo</strong></h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Categoría de Costo</strong></td>
+<td><strong>Justificación por Coste de Tiempo</strong></td>
+<td><strong>Justificación por Coste de Riesgo</strong></td>
+</tr>
+<tr>
+<td><strong>Alto Costo</strong></td>
+<td>&gt;80h Dev Senior</td>
+<td>+20% Contingencia por Riesgo Crítico</td>
+</tr>
+<tr>
+<td><strong>Alto Costo</strong></td>
+<td>&gt;60h Dev Senior</td>
+<td>+20% Contingencia por Riesgo Alto</td>
+</tr>
+<tr>
+<td><strong>Medio</strong></td>
+<td>&gt;52h Dev Senior</td>
+<td>+20% Contingencia por Riesgo Medio</td>
+</tr>
+<tr>
+<td><strong>Bajo</strong></td>
+<td>&gt;20h Dev Senior</td>
+<td>+20% Contingencia por Riesgo Bajo</td>
+</tr>
+<tr>
+<td><strong>Muy Bajo</strong></td>
+<td>&gt;10h Dev Senior</td>
+<td>+10% Contingencia por Riesgo Bajo</td>
+</tr>
+</tbody>
+</table></div>
+<h3><strong>2. Matriz Detallada por Paquetes de Trabajo (EDT)</strong></h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ID</strong></td>
+<td><strong>Paquete de Trabajo (EDT)</strong></td>
+<td><strong>Costo Estimado (USD)</strong></td>
+<td><strong>Nivel Riesgo Combinado</strong></td>
+<td><strong>Justificación Coste de Tiempo (Detallada)</strong></td>
+<td><strong>Justificación Coste de Riesgo (Detallada)</strong></td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>Módulo HCE (1.3.1)</strong></td>
+<td>$2,050</td>
+<td>Medio</td>
+<td>70h Dev Senior ($25/h) +15h QA + Integración Staging</td>
+<td>Reserva Contingencia $300 por Riesgo Alto Fallo Trazabilidad (RK-05). <strong>Mitigación:</strong> Log de auditoría inmutable (1.3.1).</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>Módulo Receta Digital (1.3.2)</strong></td>
+<td>$1,450</td>
+<td>Alto</td>
+<td>50h Dev Senior +10h QA + Maquetación PDF</td>
+<td>Reserva Falla Firma Digital ($200) por Riesgo Crítico (RK-01). <strong>Mitigación:</strong> Sello de tiempo RFC 3161 (1.3.2).</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>Módulo Turnos y Agenda (1.3.3)</strong></td>
+<td>$1,925</td>
+<td>Alto</td>
+<td>65h Dev Senior +15h QA + Integración FullCalendar</td>
+<td>Reserva Colisión Turnos ($300) por Riesgo Alto (RK-02). <strong>Mitigación:</strong> Bloqueo de concurrencia optimista (1.3.3).</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>Módulo Facturación (1.3.4)</strong></td>
+<td>$1,800</td>
+<td>Alto</td>
+<td>60h Dev Senior +15h QA + Transaccionalidad ACID</td>
+<td>Reserva Inconsistencia Stock ($300) por Riesgo Alto (RK-04). <strong>Mitigación:</strong> Transacciones encapsuladas con rollback (1.3.4).</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>Módulo Inventario (1.3.5)</strong></td>
+<td>$1,450</td>
+<td>Alto</td>
+<td>50h Dev Senior +10h QA + Gestión Lotes</td>
+<td>Reserva Vencimientos Lote ($200) por Riesgo Alto (RK-03). <strong>Mitigación:</strong> Cron Job nocturno de alertas (1.3.5).</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>Aislamiento SaaS (1.5.1)</strong></td>
+<td>$2,600</td>
+<td>Crítico</td>
+<td>80h Dev Senior + Auditoría Ciberseguridad + RLS Dev</td>
+<td>Reserva Legal $500 por Riesgo Crítico Fuga Datos (RK-01). <strong>Mitigación:</strong> Row-Level Security, Cifrado AES-256 (1.5.1).</td>
+</tr>
+</tbody>
+</table></div>
+</article></main></div></body></html>

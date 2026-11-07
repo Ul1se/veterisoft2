@@ -1,0 +1,461 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gestión y Control de Cambios - VeteriSoft (Simulación) · VeteriSoft</title><link rel="stylesheet" href="style.css"><script src="search-data.js" defer></script><script src="app.js" defer></script></head><body><header><a href="index.html" class="brand"><span>V+</span> VeteriSoft</a><span class="header-label">/ &nbsp; Documentación</span><div class="search"><input id="search" type="search" placeholder="Buscar en 13 documentos…" aria-label="Buscar en la documentación"><div id="results" aria-live="polite" hidden></div></div></header><div class="layout"><aside><details open><summary>Biblioteca del proyecto</summary><nav aria-label="Documentos"><a class="start" href="index.html">⌂ &nbsp; Centro de proyecto</a><div class="group">Dirección y alcance</div><a href="doc-01.html">ACTA DE CONSTITUCIÓN DEL PROYECTO</a><a href="doc-02.html">SCOPE STATMENT</a><a href="doc-03.html">WBS-EDT</a><a href="doc-05.html">PLANES DEL PROYECTO</a><div class="group">Requisitos y calidad</div><div class="group">Planificación y seguimiento</div><a href="doc-09.html">TIEMPOS</a><a href="doc-10.html">COSTOS</a><a href="doc-11.html">RIESGOS</a><a href="doc-12.html">GESTIÓN DE COMUNICACIONES Y STAKEHOLDERS</a><a href="doc-13.html">JIRA</a><div class="group">Procesos de gestión</div><a href="doc-14.html">Gestión de Adquisiciones — Selección y Evaluación de Proveedores (Simulación) - VeteriSoft</a><a href="doc-15.html" aria-current="page">Gestión y Control de Cambios - VeteriSoft (Simulación)</a><a href="doc-17.html">Diferencias entre PMBOK 6ta E, ISO 21500-2012, PMBOK 7ma e ISO 21500-2021 y Metodología Prince2</a></nav></details></aside><main><div class="docbar"><span>DOCUMENTACIÓN / 12 DE 13</span><a href="originales/doc-15.md" download>↓ Markdown original</a></div><article><h1>Gestión y Control de Cambios | VeteriSoft (Simulación)</h1>
+<h1>Práctico N.º 9 — Gestión y Control de Cambios | VeteriSoft</h1>
+<p><strong>Ingeniería de Software II · Gestión de Proyectos · Proyecto ISII-006-22 · 27/10/2026 · Versión 1.0</strong></p>
+<p><strong>TRABAJO ACADÉMICO CON SIMULACIÓN:</strong> el procedimiento es una propuesta para VeteriSoft. El ticket CAM-001, estimaciones, aprobación, pruebas y cierre son ficticios; no constituyen evidencia de un cambio implementado realmente. Las personas identificadas por el acta son Augusto Paz (director), Ramiro Fernández y Ulises Tobares (colaboradores). Las asignaciones técnicas adicionales deben validarse con el equipo.</p>
+<h2>1. Objetivo, alcance y línea base</h2>
+<p>Establecer un procedimiento único para recibir, analizar, decidir, ejecutar, verificar y cerrar cambios en el alcance, requisitos, diseño, base de datos, código, interfaces, cronograma o costos de VeteriSoft. Se preserva la trazabilidad entre solicitud, decisión, versiones y pruebas, evitando incorporar funcionalidades no aprobadas que pongan en riesgo el MVP de tres módulos: usuarios/mascotas, turnos e historial clínico.</p>
+<p><strong>Línea base:</strong> acta de constitución, SRS, EDT, cronograma, costos y riesgos vigentes. Un cambio aprobado puede exigir nuevas versiones de esos documentos y la actualización de la matriz de trazabilidad. Un defecto que solo corrige el cumplimiento de un requisito vigente se registra como incidencia; si modifica la línea base, debe tramitarse como solicitud de cambio.</p>
+<h2>2. Punto 1 — Procedimiento de gestión de solicitudes</h2>
+<h3>2.1 Quién solicita y dónde se registra</h3>
+<p>Podrán solicitar cambios el cliente/patrocinador, representantes de clínicas piloto, PM, analistas, desarrolladores y QA. La solicitud se formalizará en un ticket del tablero de gestión del proyecto (GitHub Issues/Projects o Jira, según el repositorio que el equipo adopte) con identificador <strong>CAM-###</strong>; Confluence conservará la decisión, el impacto y la documentación actualizada. No se aprobarán cambios exclusivamente por mensajes informales.</p>
+<h3>2.2 Campos obligatorios del ticket</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID / título / fecha / solicitante</td>
+<td>Identificación única, origen y fecha de registro</td>
+</tr>
+<tr>
+<td>Necesidad y justificación</td>
+<td>Problema actual, beneficio esperado y consecuencia de no actuar</td>
+</tr>
+<tr>
+<td>Requisitos / EDT afectados</td>
+<td>Referencias a SRS, RTM, módulos, pantallas y servicios</td>
+</tr>
+<tr>
+<td>Prioridad y tipo</td>
+<td>Correctivo, preventivo, evolutivo o regulatorio; urgencia e impacto</td>
+</tr>
+<tr>
+<td>Propuesta y alternativas</td>
+<td>Solución planteada, opciones y alternativa de no realizar</td>
+</tr>
+<tr>
+<td>Impacto</td>
+<td>Alcance, tiempo, costo, calidad, seguridad, datos, riesgos y dependencias</td>
+</tr>
+<tr>
+<td>Decisión</td>
+<td>Aprobado, rechazado o postergado; responsable, fecha y fundamento</td>
+</tr>
+<tr>
+<td>Ejecución y aceptación</td>
+<td>Responsables, tareas, versiones, casos de prueba y evidencias</td>
+</tr>
+<tr>
+<td>Cierre</td>
+<td>Resultado, aprobación de verificación, documentación y comunicación final</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2.3 Responsables y autoridad</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Responsable funcional</th>
+<th>Actividad / registro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Registro</td>
+<td>Solicitante; PM recibe</td>
+<td>Crear CAM-### y validar campos mínimos</td>
+</tr>
+<tr>
+<td>Clasificación</td>
+<td>PM: Augusto Paz</td>
+<td>Determinar urgencia, alcance y si corresponde cambio o defecto</td>
+</tr>
+<tr>
+<td>Análisis</td>
+<td>Analista y responsables técnicos designados</td>
+<td>Estimar impacto y opciones; actualizar evaluación de riesgos</td>
+</tr>
+<tr>
+<td>Decisión</td>
+<td>PM para cambios sin impacto en línea base, si existe delegación; patrocinador/cliente para cambios de alcance, costo o plazo</td>
+<td>Aprobar, rechazar o postergar con justificación escrita</td>
+</tr>
+<tr>
+<td>Comunicación</td>
+<td>PM</td>
+<td>Notificar al solicitante y al equipo; actualizar tablero y acta</td>
+</tr>
+<tr>
+<td>Implementación</td>
+<td>Integrante técnico asignado</td>
+<td>Rama, commits, migraciones, interfaz y documentación</td>
+</tr>
+<tr>
+<td>Verificación</td>
+<td>QA / revisor designado; cliente cuando cambia aceptación funcional</td>
+<td>Pruebas y UAT; evidencia vinculada al ticket</td>
+</tr>
+<tr>
+<td>Cierre</td>
+<td>PM</td>
+<td>Verificar documentación, versión liberada y aceptación; cerrar CAM</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Estados propuestos:</strong> Registrado → En análisis → Pendiente de decisión → Aprobado / Rechazado / Postergado → En implementación → En verificación → Cerrado. Si falla una prueba, vuelve a implementación; un cambio postergado se reevalúa en el backlog.</p>
+<h2>3. Punto 2 — Diagrama del proceso con decisiones</h2>
+<p>Diagrama de flujo textual con responsables (cada flecha representa una transición registrada en el ticket):</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Flujo</th>
+<th>Responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INICIO → necesidad identificada → CAM-### registrado</td>
+<td>Solicitante</td>
+</tr>
+<tr>
+<td>↓ Verificar completitud y clasificar → ¿solicitud válida?</td>
+<td>PM</td>
+</tr>
+<tr>
+<td>NO → solicitar información → volver al registro</td>
+<td>Solicitante / PM</td>
+</tr>
+<tr>
+<td>SÍ → analizar alcance, tiempo, costo, calidad y riesgos</td>
+<td>Analista + equipo técnico</td>
+</tr>
+<tr>
+<td>↓ Presentar alternativas y recomendación → DECISIÓN</td>
+<td>PM + autoridad aprobadora</td>
+</tr>
+<tr>
+<td>RECHAZAR → comunicar motivo → archivar y cerrar</td>
+<td>Autoridad / PM</td>
+</tr>
+<tr>
+<td>POSTERGAR → registrar condición y fecha de revisión → backlog</td>
+<td>Autoridad / PM</td>
+</tr>
+<tr>
+<td>APROBAR → actualizar línea base y planificar implementación</td>
+<td>PM</td>
+</tr>
+<tr>
+<td>↓ Implementar, vincular commits, migraciones y documentos</td>
+<td>Desarrollo / datos / UX</td>
+</tr>
+<tr>
+<td>↓ Verificar pruebas → ¿cumple aceptación?</td>
+<td>QA + cliente si corresponde</td>
+</tr>
+<tr>
+<td>NO → registrar defectos → corregir → volver a pruebas</td>
+<td>Equipo técnico</td>
+</tr>
+<tr>
+<td>SÍ → actualizar versiones, comunicar y CERRAR</td>
+<td>PM</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Lectura del diagrama:</strong> ninguna rama aprobada pasa directamente a cierre sin implementación y verificación; las ramas rechazadas y postergadas registran decisión y comunicación, sin introducir cambios al producto.</p>
+<h2>4. Punto 3 — Caso simulado CAM-001: evitar superposición de turnos</h2>
+<h3>4.1 Solicitud y motivo</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor simulado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ticket</td>
+<td>CAM-001 — Validar superposición de turnos por profesional</td>
+</tr>
+<tr>
+<td>Fecha</td>
+<td>27/10/2026 (escenario académico)</td>
+</tr>
+<tr>
+<td>Solicitante</td>
+<td>Representante ficticio de recepción de clínica piloto</td>
+</tr>
+<tr>
+<td>Problema</td>
+<td>En un ensayo hipotético se observa que dos turnos pueden ocupar intervalos superpuestos para un mismo veterinario</td>
+</tr>
+<tr>
+<td>Propuesta</td>
+<td>Validación transaccional de intervalos antes de confirmar o reprogramar turnos; aviso comprensible en interfaz</td>
+</tr>
+<tr>
+<td>Alcance</td>
+<td>Módulo de turnos del MVP; reglas de disponibilidad, backend, base de datos, interfaz y pruebas</td>
+</tr>
+<tr>
+<td>Alternativa</td>
+<td>Control manual temporal, rechazado por mayor riesgo operativo</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Regla propuesta:</strong> dos intervalos [inicio1, fin1) y [inicio2, fin2) se superponen si <code>inicio1 &lt; fin2 AND inicio2 &lt; fin1</code>, para el mismo profesional y clínica, excluyendo turnos cancelados. Dos turnos contiguos no se consideran superpuestos. La comprobación debe realizarse en backend y protegerse frente a solicitudes simultáneas.</p>
+<h3>4.2 Matriz de impacto (estimaciones ficticias)</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Dimensión</th>
+<th>Impacto estimado</th>
+<th>Mitigación / decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alcance</td>
+<td>Agrega regla de validación y mensaje de conflicto al flujo de reserva/reprogramación</td>
+<td>Actualizar requisito funcional y criterio de aceptación; no crear nuevo módulo</td>
+</tr>
+<tr>
+<td>Tiempo</td>
+<td>16 horas: análisis 3 h, backend 5 h, datos 2 h, interfaz 2 h, pruebas 4 h</td>
+<td>Asignar capacidad en próximo sprint sin desplazar funciones críticas</td>
+</tr>
+<tr>
+<td>Costo</td>
+<td>16 h × USD 12/h = USD 192 de costo imputado ilustrativo, sin compra externa</td>
+<td>Solicitar autorización si afecta presupuesto base</td>
+</tr>
+<tr>
+<td>Calidad</td>
+<td>Reduce dobles reservas; requiere pruebas de límites y concurrencia</td>
+<td>Automatizar casos positivos y negativos</td>
+</tr>
+<tr>
+<td>Riesgos</td>
+<td>Condiciones de carrera, falsos conflictos, regresiones en reprogramación</td>
+<td>Bloqueo/serialización transaccional y regresión</td>
+</tr>
+<tr>
+<td>Documentación</td>
+<td>SRS, RTM, diseño, manual y casos de prueba</td>
+<td>Actualizar versiones vinculadas a CAM-001</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4.3 Decisión, implementación y cierre ficticios</h3>
+<p><strong>Decisión simulada:</strong> aprobado condicionalmente por el patrocinador ficticio a recomendación del PM Augusto Paz, sujeto a incorporar las 16 horas al sprint sin comprometer el hito de MVP. <strong>Esto no representa una autorización real del patrocinador ni una acción efectuada por Augusto.</strong></p>
+<ol>
+<li>Actualizar SRS con criterio: «No se pueden confirmar ni reprogramar turnos que se solapen para el mismo profesional dentro de una clínica»; enlazar CAM-001 a RTM.</li>
+<li>Implementar consulta transaccional de solapamiento en backend; validar tanto creación como reprogramación.</li>
+<li>Evaluar índice de clínica, profesional y fecha; crear migración solo si es necesaria y reversible.</li>
+<li>Mostrar mensaje de conflicto y permitir seleccionar otra franja sin perder datos ingresados.</li>
+<li>Agregar pruebas: franja libre, superposición parcial, contención total, turnos contiguos, cancelados, clínicas distintas y dos solicitudes simultáneas.</li>
+<li>Ejecutar revisión de código, pruebas automatizadas, integración y UAT simulado de recepción.</li>
+<li>Publicar documentación y versión del sistema; comunicar resultado y cerrar ticket.</li>
+</ol>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Evidencia simulada</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pruebas de reserva y reprogramación</td>
+<td>7 escenarios funcionales aprobados</td>
+</tr>
+<tr>
+<td>Concurrencia</td>
+<td>Dos reservas simultáneas: solo una se confirma</td>
+</tr>
+<tr>
+<td>Revisión</td>
+<td>PR ficticia #42 aprobada y fusionada</td>
+</tr>
+<tr>
+<td>UAT</td>
+<td>Recepción ficticia acepta el aviso y flujo alternativo</td>
+</tr>
+<tr>
+<td>Estado final</td>
+<td><strong>CERRADO — SIMULADO</strong>; versión hipotética v0.3.1</td>
+</tr>
+</tbody>
+</table></div>
+<h2>5. Punto 4 — Control de configuración y versiones</h2>
+<p>Se propone vincular toda modificación con el identificador <strong>CAM-001</strong>. Las herramientas de la tabla son mecanismos recomendados, no afirmaciones de que ya estén configurados.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Herramienta / mecanismo</th>
+<th>Identificación de versiones</th>
+<th>Relación con ticket</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base de datos</td>
+<td>Scripts SQL versionados en Git y herramienta de migraciones (p. ej., Flyway o equivalente)</td>
+<td><code>V003__cam001_turnos.sql</code>; migración reversible documentada</td>
+<td>Referencia CAM-001 en script, PR, registro de ejecución y RTM</td>
+</tr>
+<tr>
+<td>Interfaz de usuario</td>
+<td>Figma, o repositorio de prototipos exportados si no se dispone de Figma</td>
+<td>Diseño Turnos v1.1, historial de cambios y fecha</td>
+<td>Enlace a CAM-001 en comentario/versión y captura de aceptación</td>
+</tr>
+<tr>
+<td>Documentación</td>
+<td>Confluence y control de versiones de páginas</td>
+<td>SRS v2.1, RTM v2.1 y manual Turnos v1.1 (hipotéticos)</td>
+<td>Sección «Cambios»: CAM-001, fecha, autor y aprobación</td>
+</tr>
+<tr>
+<td>Código fuente</td>
+<td>GitHub, ramas, pull requests, tags y revisión por pares</td>
+<td><code>feature/CAM-001-turnos</code>, commits con CAM-001, tag <code>v0.3.1</code></td>
+<td>PR enlazada al ticket, CI y evidencia de pruebas</td>
+</tr>
+</tbody>
+</table></div>
+<h3>5.1 Reglas de integridad y recuperación</h3>
+<ul>
+<li>Evitar editar directamente la rama principal; requerir revisión y pruebas para fusionar.</li>
+<li>No modificar migraciones ya aplicadas en entornos compartidos: crear una nueva migración correctiva y registrar reversión.</li>
+<li>Conservar versiones anteriores de requisitos, prototipos y manuales, y registrar quién aprobó cada actualización.</li>
+<li>Usar la misma clave CAM-### en ticket, rama, commit, PR, migración, acta y casos de prueba.</li>
+<li>Si falla el despliegue, detener liberación, restaurar versión anterior de aplicación y aplicar procedimiento seguro de reversión de datos.</li>
+</ul>
+<h3>5.2 Ejemplo de trazabilidad de CAM-001</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Artefacto</th>
+<th>Identificador simulado</th>
+<th>Vinculación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solicitud</td>
+<td>CAM-001</td>
+<td>Origen del cambio</td>
+</tr>
+<tr>
+<td>Requisito</td>
+<td>RF-TURNOS-CAM001 / SRS v2.1</td>
+<td>Regla de solapamiento</td>
+</tr>
+<tr>
+<td>Diseño</td>
+<td>Turnos v1.1</td>
+<td>Mensaje de conflicto</td>
+</tr>
+<tr>
+<td>Base de datos</td>
+<td>V003__cam001_turnos.sql</td>
+<td>Índice y/o restricción de apoyo</td>
+</tr>
+<tr>
+<td>Código</td>
+<td>feature/CAM-001-turnos / PR #42</td>
+<td>Validación transaccional</td>
+</tr>
+<tr>
+<td>Pruebas</td>
+<td>TC-CAM001-01 a TC-CAM001-07</td>
+<td>Casos de aceptación</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>v0.3.1</td>
+<td>Versión del sistema</td>
+</tr>
+<tr>
+<td>Cierre</td>
+<td>ACT-CAM001</td>
+<td>Verificación y comunicación</td>
+</tr>
+</tbody>
+</table></div>
+<h2>6. Riesgos del proceso y medidas de control</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Riesgo</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cambios informales sin aprobación</td>
+<td>Ticket obligatorio y autoridad registrada</td>
+</tr>
+<tr>
+<td>Desvío de alcance o costo</td>
+<td>Análisis de impacto y actualización de líneas base</td>
+</tr>
+<tr>
+<td>Pérdida de trazabilidad</td>
+<td>Clave CAM-### en todos los artefactos</td>
+</tr>
+<tr>
+<td>Defectos de regresión</td>
+<td>PR, pruebas automáticas y UAT</td>
+</tr>
+<tr>
+<td>Conflictos de concurrencia en turnos</td>
+<td>Validación atómica y pruebas simultáneas</td>
+</tr>
+</tbody>
+</table></div>
+<h2>7. Correspondencia con la consigna oficial</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Punto</th>
+<th>Sección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Gestión de solicitudes, decisiones, comunicación y cierre</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2. Diagrama con responsables y decisiones</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3. Solicitud simulada e impacto completo</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4. Versiones de BD, UI, documentación y código</td>
+<td>5</td>
+</tr>
+</tbody>
+</table></div>
+<h2>8. Fuentes y referencias del proyecto</h2>
+<ul>
+<li>Práctico N.º 9 Ingeniería de Software II — Gestión y control de cambios (consigna aportada por el estudiante).</li>
+<li><a href="doc-01.html">Acta de constitución del proyecto</a></li>
+<li></li>
+<li><a href="doc-03.html">EDT/WBS</a></li>
+<li></li>
+<li><a href="doc-11.html">Matriz de riesgos</a></li>
+</ul>
+</article></main></div></body></html>

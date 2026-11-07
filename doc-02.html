@@ -1,0 +1,213 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SCOPE STATMENT · VeteriSoft</title><link rel="stylesheet" href="style.css"><script src="search-data.js" defer></script><script src="app.js" defer></script></head><body><header><a href="index.html" class="brand"><span>V+</span> VeteriSoft</a><span class="header-label">/ &nbsp; Documentación</span><div class="search"><input id="search" type="search" placeholder="Buscar en 13 documentos…" aria-label="Buscar en la documentación"><div id="results" aria-live="polite" hidden></div></div></header><div class="layout"><aside><details open><summary>Biblioteca del proyecto</summary><nav aria-label="Documentos"><a class="start" href="index.html">⌂ &nbsp; Centro de proyecto</a><div class="group">Dirección y alcance</div><a href="doc-01.html">ACTA DE CONSTITUCIÓN DEL PROYECTO</a><a href="doc-02.html" aria-current="page">SCOPE STATMENT</a><a href="doc-03.html">WBS-EDT</a><a href="doc-05.html">PLANES DEL PROYECTO</a><div class="group">Requisitos y calidad</div><div class="group">Planificación y seguimiento</div><a href="doc-09.html">TIEMPOS</a><a href="doc-10.html">COSTOS</a><a href="doc-11.html">RIESGOS</a><a href="doc-12.html">GESTIÓN DE COMUNICACIONES Y STAKEHOLDERS</a><a href="doc-13.html">JIRA</a><div class="group">Procesos de gestión</div><a href="doc-14.html">Gestión de Adquisiciones — Selección y Evaluación de Proveedores (Simulación) - VeteriSoft</a><a href="doc-15.html">Gestión y Control de Cambios - VeteriSoft (Simulación)</a><a href="doc-17.html">Diferencias entre PMBOK 6ta E, ISO 21500-2012, PMBOK 7ma e ISO 21500-2021 y Metodología Prince2</a></nav></details></aside><main><div class="docbar"><span>DOCUMENTACIÓN / 03 DE 13</span><a href="originales/doc-02.md" download>↓ Markdown original</a></div><article><h1>📐 SCOPE STATMENT</h1>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th><strong>CONTROL DE VERSIONES</strong></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Versión</td>
+<td>Hecha por</td>
+<td>Revisada por</td>
+<td>Aprobada por</td>
+<td>Fecha</td>
+<td>Motivo</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>Augusto Paz</td>
+<td>SP</td>
+<td>SP</td>
+<td>10/09/2026</td>
+<td>Cambios</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th><strong>Nombre del Proyecto                                                        Siglas del Proyecto</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desarrollo de Verisoft</td>
+<td>DEVESO</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th><strong>Descripción del Alcance del Producto</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requerimientos: Condiciones o capacidades que debe poseer o satisfacer el producto para cumplir con las necesidades del cliente</td>
+<td>Características: Propiedades lógicas y funcionales que son distintivas del producto y describen su singularidad.</td>
+</tr>
+<tr>
+<td>1. El Sistema debe permitir el acceso y la visualización de datos de manera segmentada mediante roles estructurados (Director Médico, Veterinario, Recepcionista y Dueño)</td>
+<td>1. Aplicaciones web responsiva programada bajo una arquitectura basada en una backend robusto (Java y Spring Boot) interactuando con una base de datos relacional (SQL) y un frontend dinámico (JavaScript/TypeScript)</td>
+</tr>
+<tr>
+<td>1. El Sistema de inventario debe descontar en tiempo real los insumos médicos utilizados en consultorio y los productos comerciales vendidos.</td>
+<td>1. Módulo diferencial de emergencia con generación automática de códigos QR únicos vinculados al perfil digital del paciente (permitiendo, por ejemplo, escanear la chapita de un perro y reportarlo como perdido sin exponer el teléfono de su dueño)</td>
+</tr>
+<tr>
+<td>1. La plataforma debe emitir notificaciones automatizadas de calendario para alertar sobre el vencimiento de vacunas y desparasitaciones periódicas.</td>
+<td>1. Estructura de software escalable diseñada para comercializarse bajo un modelo SaaS (Software as a Service) con planes de accesos progresivos (Básicos, Profesional, Premium).</td>
+</tr>
+<tr>
+<td>1. El modulo de agendamiento debe bloquear automáticamente la superposición de turnos para un mismo profesional.</td>
+<td>1. Interfaz gráfica orientada a dispositivos móviles para el portal de autogestión de los clientes.</td>
+</tr>
+<tr>
+<td>1. El Sistema debe garantizar un tiempo de respuesta menor a 2 segundos para todas las consultas al historial clínico.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th><strong>Criterios de Aceptación del Producto:</strong> Especificaciones o requerimientos de rendimiento, funcionalidad, etc., que deben cumplirse antes que se acepte el producto del Proyecto.</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conceptos</td>
+<td>Criterios de Aceptación</td>
+</tr>
+<tr>
+<td>1. Técnicos</td>
+<td>La plataforma web debe ser completamente responsiva, garantizando su operabilidad tanto en los monitores de la recepción de la clínica como en los celulares de los clientes.Las consultas a la base de datos relacional para recuperar el historial de un paciente deben resolverse en menos de 2 segundos. El Sistema debe gestionar la concurrencia para evitar la superposición de turnos médicos en un mismo horario.</td>
+</tr>
+<tr>
+<td>1. De Calidad</td>
+<td>El flujo de negocio central (alta de paciente, reserve de turno, registro de atención y descuento de inventario) debe completarse sin arrojar errores o interrupciones de servicio. Seguridad de accesos: los permisos deben restringir estrictamente las vistas según rol (Administrador, Veterinario, Recepción, Dueño).</td>
+</tr>
+<tr>
+<td>1. Administrativos</td>
+<td>Todos los entregables finales (documentación UML, código Fuente y prototipo desplegado) deben ser aprobados y firmados por el Director Médico de la clínica antes del pase a producción.</td>
+</tr>
+<tr>
+<td>1. Comerciales</td>
+<td>La arquitectura del software debe soportar la habilitación o bloqueo de módulos funcionales dependiendo del nivel de suscripción SaaS contratado (Plan Básico, Profesional, Premium).</td>
+</tr>
+<tr>
+<td>1. Sociales</td>
+<td>El Sistema de alertas por mascotas perdidas debe garantizar por si un perro se extravía quien escanee su código QR pueda notificar al dueño a través de la plataforma sin que el telefono o domicilio personal queden expuestos públicamente.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th><strong>Entregables del Proyecto:</strong> Productos Entregables intermedios y finales que se generarán en cada fase del proyecto</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fase del Proyecto</td>
+<td>Productos Entregables</td>
+</tr>
+<tr>
+<td>1.0: Gestión del Proyecto</td>
+<td>Acta de Constitución, Plan de Proyecto y Registro de Stakeholders debidamente aprobados.</td>
+</tr>
+<tr>
+<td>2.0: Requerimientos y Diseño</td>
+<td>Documento de Especificación de Requisitos de Software (ERS), diagramas UML (casos de uso, secuencia, clases) y Modelo Entidad-Relación aprobados por el cliente.</td>
+</tr>
+<tr>
+<td>3.0: Desarrollo de Software</td>
+<td>Repositorios de código Fuente del backend (API REST en Spring Boot) código frontend (JavaScript/TypeScript) y scripts SQL de la base de datos.</td>
+</tr>
+<tr>
+<td>4.0: Pruebas e Integración</td>
+<td>Informes de pruebas de QA (Quality Assurance) y corrección de error (bugfixing), con el prototipo funcional desplegado en un entorno de pruebas.</td>
+</tr>
+<tr>
+<td>5.0: Cierre y Despliegue</td>
+<td>Producto Mínimo Viable (MPV) desplegado en producción, manual de usuario para el personal y Acta de Aceptación firmada.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>**Exclusiones del Proyecto: **ENTREGABLES, PROCESOS, ÁREAS, PROCEDIMIENTOS, CARÁCTERÍSTICAS, REQUERIMIENTOS, FUNCIONES, ESPECIALIDADES, FASES, ETAPAS, ESPACIOS FÍSICOS, VIRTUALES, REGIONES, ETC., QUE SON EXCLUSIONES CONOCIDAS Y NO SERÁN ABORDADAS POR EL PROYECTO, Y QUE POR LO TANTO DEBEN ESTAR CLARAMENTE ESTABLECIDAS PARA EVITAR INCORRECTAS INTERPRETACIONES ENTRE LOS STAKEHOLDERS DEL PROYECTO.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Provisión, instalación o mantenimiento de hardware físco en la clínica (computadoras, servidores locales, impresoras, tickeadoras o lectores de código de barras.</td>
+</tr>
+<tr>
+<td>1. Integración de pagos reales mediante pasarelas (Mercado Pago, Modo, BNA+, etc) o vinculación directa con el sistema de facturación electronica de AFIP.</td>
+</tr>
+<tr>
+<td>1. Desarrollo de aplicaciones móviles nativas instalables para sistemas operativos Android (Google Play) o iOS (App Store).</td>
+</tr>
+<tr>
+<td>1. Fabricación física, impression o distribución de las chapas identificatorias para collar de las mascotas que contienen el código QR.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th><strong>Restricciones del Proyecto:</strong> FACTORES QUE LIMITAN EL RENDIMIENTO DEL PROYECTO, EL RENDIMIENTO DE UN PROCESO DEL PROYECTO, O LAS OPCIONES DE PLANIFICACIÓN DEL PROYECTO. PUEDEN APLICAR A LOS OBJETIVOS DEL PROYECTO O A LOS RECURSOS QUE SE EMPLEA EN EL PROYECTO.</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internos a la organización</td>
+<td>Ambientales o Externos a la organización</td>
+</tr>
+<tr>
+<td>El costo del alojamiento web (hosting) y base de datos durante la fase de desarrollo no debe exceeder la capa gratuita(free tier) de los proveedores cloud.</td>
+<td>Interrupciones prolongadas en los servicios de infraestructura en la nube (AWS, Google Cloud, Azure) que retrasen el desarrollo o despliegue.</td>
+</tr>
+<tr>
+<td>El desarrollo y estabilización del Producto Minimo Viable (MVP) debe estar finalizado antes de la fecha limite estipulada contractualmente para el lanzamiento en la temporada de alta demanda (verano 26/27).</td>
+<td>Cambios repentinos en las normativas fiscales o de privacidad de datos personalesque fuercen una reestructuración de la base de datos.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th><strong>Supuestos del Proyecto:</strong> FACTORES QUE PARA PROPÓSITOS DE LA PLANIFICACIÓN DEL PROYECTO SE CONSIDERAN VERDADEROS, REALES O CIERTOS.</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internos a la organización</td>
+<td>Ambientales o externos a la organización</td>
+</tr>
+<tr>
+<td>Disponibilidad plena de los recursos humanos de la clínica (recepcionistas, veterinarias, director) para la toma de requerimientos, entrevistas y pruebas de aceptación (UAT) en los horarios estipulados.</td>
+<td>La clínica veterinaria cuenta con una conexión a internet estable y continua en sus instalaciones, indispensable para operar un Sistema basado en la nube.</td>
+</tr>
+<tr>
+<td>El personal administrativa posee conocimientos básicos de navegación web e interfaces digitales para operar el sistema sin una curva de aprendizaje crítica.</td>
+<td>Los dueños de las mascotas poseen smartphones con acceso a internet y capacidad para escanear los códigos QR de las mascotas perdidas o accede a su portal web.</td>
+</tr>
+</tbody>
+</table></div>
+</article></main></div></body></html>

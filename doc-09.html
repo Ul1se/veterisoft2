@@ -1,0 +1,490 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TIEMPOS · VeteriSoft</title><link rel="stylesheet" href="style.css"><script src="search-data.js" defer></script><script src="app.js" defer></script></head><body><header><a href="index.html" class="brand"><span>V+</span> VeteriSoft</a><span class="header-label">/ &nbsp; Documentación</span><div class="search"><input id="search" type="search" placeholder="Buscar en 13 documentos…" aria-label="Buscar en la documentación"><div id="results" aria-live="polite" hidden></div></div></header><div class="layout"><aside><details open><summary>Biblioteca del proyecto</summary><nav aria-label="Documentos"><a class="start" href="index.html">⌂ &nbsp; Centro de proyecto</a><div class="group">Dirección y alcance</div><a href="doc-01.html">ACTA DE CONSTITUCIÓN DEL PROYECTO</a><a href="doc-02.html">SCOPE STATMENT</a><a href="doc-03.html">WBS-EDT</a><a href="doc-05.html">PLANES DEL PROYECTO</a><div class="group">Requisitos y calidad</div><div class="group">Planificación y seguimiento</div><a href="doc-09.html" aria-current="page">TIEMPOS</a><a href="doc-10.html">COSTOS</a><a href="doc-11.html">RIESGOS</a><a href="doc-12.html">GESTIÓN DE COMUNICACIONES Y STAKEHOLDERS</a><a href="doc-13.html">JIRA</a><div class="group">Procesos de gestión</div><a href="doc-14.html">Gestión de Adquisiciones — Selección y Evaluación de Proveedores (Simulación) - VeteriSoft</a><a href="doc-15.html">Gestión y Control de Cambios - VeteriSoft (Simulación)</a><a href="doc-17.html">Diferencias entre PMBOK 6ta E, ISO 21500-2012, PMBOK 7ma e ISO 21500-2021 y Metodología Prince2</a></nav></details></aside><main><div class="docbar"><span>DOCUMENTACIÓN / 06 DE 13</span><a href="originales/doc-09.md" download>↓ Markdown original</a></div><article><h1>🕗 TIEMPOS</h1>
+<p>Esta matriz de tiempo detallada está diseñada siguiendo el <strong>Esquema Jerárquico</strong> y los <strong>Criterios Metodológicos</strong> establecidos en el documento de Ingeniería de Software II para el proyecto <strong>VeteriSoft</strong>.</p>
+<p>Dado que el documento es una <strong>EDT (Estructura de Desglose del Trabajo)</strong> y no un cronograma con fechas, he elaborado una planificación lógica basada en las directrices de la <strong>Regla del 100%</strong>, la <strong>orientación a entregables</strong> y el estándar de <strong>Paquetes de Trabajo (8-80 horas)</strong> dentro de ciclos de <em>Sprints</em>.</p>
+<p>Esta matriz asume un modelo de desarrollo <strong>Ágil (Scrum)</strong> mixto para las fases de planificación.</p>
+<h1><strong>VeteriSoft: Matriz de Tiempo Detallada del Proyecto (Plan Maestro)</strong></h1>
+<p><strong>Asignatura:</strong> Ingeniería de Software II – Gestión de Proyectos (<strong>Código ISII-006-22</strong>) <strong>Modelo:</strong> Ágil / Híbrido (<strong>Sprints de 2 semanas</strong>) <strong>Dedicación del Equipo:</strong> 100% durante el Sprint (Rule 8/80)</p>
+<h2><strong>Resumen del Ciclo de Vida (Hitos Principales)</strong></h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ID Hito</strong></td>
+<td><strong>Nombre del Hito / Entregable Principal</strong></td>
+<td><strong>Ubicación (Sprint / Semana)</strong></td>
+<td><strong>Estado Final Esperado</strong></td>
+</tr>
+<tr>
+<td><strong>H1</strong></td>
+<td><strong>Cierre del Acta de Constitución y Alcance (1.1.1)</strong></td>
+<td><strong>Sprint 1 (S2)</strong></td>
+<td>Firma del Sponsor congelando alcance preliminar.</td>
+</tr>
+<tr>
+<td><strong>H2</strong></td>
+<td><strong>Aprobación de la ERS Formal IEEE 830 (1.2.1)</strong></td>
+<td><strong>Sprint 2 (S4)</strong></td>
+<td>Requisitos funcionales y no funcionales validados.</td>
+</tr>
+<tr>
+<td><strong>H3</strong></td>
+<td><strong>Congelamiento de Línea Base de Diseño (1.2.3)</strong></td>
+<td><strong>Sprint 3 (S6)</strong></td>
+<td>Modelo DER Multitenant y Prototipos Figma aprobados.</td>
+</tr>
+<tr>
+<td><strong>H4</strong></td>
+<td><strong>MVP Clínico (Módulo 1.3.1) Operativo</strong></td>
+<td><strong>Sprint 5 (S10)</strong></td>
+<td>HCE y Fichas Médicas funcionales en Staging.</td>
+</tr>
+<tr>
+<td><strong>H5</strong></td>
+<td><strong>Portal del Tutor &amp; QR Integrado (1.4)</strong></td>
+<td><strong>Sprint 7 (S14)</strong></td>
+<td>Identificación QR y Portal Mobile operativos.</td>
+</tr>
+<tr>
+<td><strong>H6</strong></td>
+<td><strong>Certificación de QA Final (1.6)</strong></td>
+<td><strong>Sprint 9 (S18)</strong></td>
+<td>Pruebas de Carga/Seguridad (SLA) aprobadas.</td>
+</tr>
+<tr>
+<td><strong>H7</strong></td>
+<td><strong>Go-Live Definitivo (1.7.4)</strong></td>
+<td><strong>Sprint 10 (S20)</strong></td>
+<td><strong>Plataforma en Producción operando al 100%.</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2><strong>Desglose Detallado por Sprints (8-80h por Paquete de Trabajo)</strong></h2>
+<p><strong>Nota:</strong> La columna &quot;Duración Estimada&quot; se refiere al esfuerzo concentrado dentro del timebox de 2 semanas del Sprint para ese entregable específico, cumpliendo el Criterio 8/80.</p>
+<h3><strong>FASE 1: INICIACIÓN Y PLANIFICACIÓN (Sprints 1 - 3)</strong></h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ubicación Temporada</strong></td>
+<td><strong>Cód. EDT</strong></td>
+<td><strong>Nombre del Paquete de Trabajo (Entregable)</strong></td>
+<td><strong>Duración Estimada (h)</strong></td>
+<td><strong>Responsable</strong></td>
+<td><strong>Dependencias</strong></td>
+</tr>
+<tr>
+<td><strong>Sprint 1 (Semana 1-2)</strong></td>
+<td><strong>1.1.1</strong></td>
+<td><strong>Acta de Constitución y Alcance</strong> (Project Charter)</td>
+<td>16-24h</td>
+<td>PM</td>
+<td>—</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.2.1</strong></td>
+<td><strong>Especificación de Requisitos Formal</strong> (Inicio relevamiento)</td>
+<td>40-60h</td>
+<td>Analista Funcional</td>
+<td>1.1.1 (parcial)</td>
+</tr>
+<tr>
+<td><strong>Hito 1</strong></td>
+<td><strong>S1 (Fin)</strong></td>
+<td><strong>Congelamiento de Alcance Preliminar (Sign-off)</strong></td>
+<td><strong>—</strong></td>
+<td><strong>Sponsor</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sprint 2 (Semana 3-4)</strong></td>
+<td><strong>1.1.2</strong></td>
+<td><strong>Plan de Dirección del Proyecto</strong> (Cronograma/Costos/Riesgos Linea Base)</td>
+<td>24-32h</td>
+<td>PM</td>
+<td>1.1.1</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.2.1</strong></td>
+<td><strong>Especificación de Requisitos Formal</strong> (Validación IEEE 830)</td>
+<td>40h</td>
+<td>Analista Funcional</td>
+<td>1.1.1, S1 Feedback</td>
+</tr>
+<tr>
+<td><strong>Hito 2</strong></td>
+<td><strong>S2 (Fin)</strong></td>
+<td><strong>Aprobación ERS (Sign-off)</strong></td>
+<td><strong>—</strong></td>
+<td><strong>Cuerpo Médico/Stakeholders</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sprint 3 (Semana 5-6)</strong></td>
+<td><strong>1.2.2</strong></td>
+<td><strong>Arquitectura del Sistema SaaS Multitenant</strong> (Diseño C4)</td>
+<td>40-60h</td>
+<td>Arquitecto</td>
+<td>1.2.1</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.2.3</strong></td>
+<td><strong>Modelo de Datos Relacional y Esquemas Multitenant</strong> (DER/DDL)</td>
+<td>32-40h</td>
+<td>Ing. de Datos</td>
+<td>1.2.1, 1.2.2</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.2.4</strong></td>
+<td><strong>Prototipos UX/UI y Guía de Estilos</strong> (Figma Interactivos)</td>
+<td>40-80h</td>
+<td>Diseñador UX/UI</td>
+<td>1.2.1</td>
+</tr>
+<tr>
+<td><strong>Hito 3</strong></td>
+<td><strong>S3 (Fin)</strong></td>
+<td><strong>Congelamiento de Línea Base de Diseño</strong></td>
+<td><strong>—</strong></td>
+<td><strong>Tech Lead</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3><strong>FASE 2: DESARROLLO DEL NÚCLEO (Sprints 4 - 6)</strong></h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ubicación Temporada</strong></td>
+<td><strong>Cód. EDT</strong></td>
+<td><strong>Nombre del Paquete de Trabajo (Entregable)</strong></td>
+<td><strong>Duración Estimada (h)</strong></td>
+<td><strong>Responsable</strong></td>
+<td><strong>Dependencias</strong></td>
+</tr>
+<tr>
+<td><strong>Sprint 4 (Semana 7-8)</strong></td>
+<td><strong>1.3.1</strong></td>
+<td><strong>Módulo de Historia Clínica Electrónica (HCE)</strong> (Desarrollo Backend/Frontend)</td>
+<td>80h</td>
+<td>Dev Fullstack</td>
+<td>1.2.3, 1.2.4</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.5.1</strong></td>
+<td><strong>Aislamiento Lógico y Seguridad Multitenant</strong> (Row-Level Security)</td>
+<td>40h</td>
+<td>Ing. Ciberseguridad</td>
+<td>1.2.2, 1.2.3</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.1.3</strong></td>
+<td><strong>Gestión de Sprints y Ceremonias Ágiles</strong> (Continuo)</td>
+<td>8h/Sprint</td>
+<td>Scrum Master</td>
+<td>—</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sprint 5 (Semana 9-10)</strong></td>
+<td><strong>1.3.1</strong></td>
+<td><strong>Módulo de HCE</strong> (Integración y Pruebas Unitarias)</td>
+<td>60-80h</td>
+<td>Dev Fullstack</td>
+<td>1.3.1 (S4)</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.3.3</strong></td>
+<td><strong>Módulo de Gestión de Turnos y Agenda Médica</strong> (Backend core)</td>
+<td>40h</td>
+<td>Dev Fullstack</td>
+<td>1.2.3</td>
+</tr>
+<tr>
+<td><strong>Hito 4</strong></td>
+<td><strong>S5 (Fin)</strong></td>
+<td><strong>MVP Clínico Operativo (Staging)</strong></td>
+<td><strong>—</strong></td>
+<td><strong>PM / QA</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sprint 6 (Semana 11-12)</strong></td>
+<td><strong>1.3.2</strong></td>
+<td><strong>Módulo de Prescripción y Receta Digital con Firma</strong></td>
+<td>60-80h</td>
+<td>Dev Backend</td>
+<td>1.3.1</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.3.3</strong></td>
+<td><strong>Módulo de Gestión de Turnos</strong> (Integración Frontend Real-time)</td>
+<td>40-60h</td>
+<td>Dev Fullstack</td>
+<td>1.3.3 (S5)</td>
+</tr>
+</tbody>
+</table></div>
+<h3><strong>FASE 3: COMPLEMENTOS, PORTAL Y QA (Sprints 7 - 9)</strong></h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ubicación Temporada</strong></td>
+<td><strong>Cód. EDT</strong></td>
+<td><strong>Nombre del Paquete de Trabajo (Entregable)</strong></td>
+<td><strong>Duración Estimada (h)</strong></td>
+<td><strong>Responsable</strong></td>
+<td><strong>Dependencias</strong></td>
+</tr>
+<tr>
+<td><strong>Sprint 7 (Semana 13-14)</strong></td>
+<td><strong>1.4.1</strong></td>
+<td><strong>Portal Web / Móvil del Tutor</strong> (Autogestión Turnos)</td>
+<td>80h</td>
+<td>Dev Frontend</td>
+<td>1.3.3</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.4.2</strong></td>
+<td><strong>Módulo de Perfil Público e Identificación por Placa QR</strong></td>
+<td>32-40h</td>
+<td>Dev Fullstack</td>
+<td>1.2.3, 1.3.1</td>
+</tr>
+<tr>
+<td><strong>Hito 5</strong></td>
+<td><strong>S7 (Fin)</strong></td>
+<td><strong>Portal Tutor y Sistema QR Integrado</strong></td>
+<td><strong>—</strong></td>
+<td><strong>PM / QA</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sprint 8 (Semana 15-16)</strong></td>
+<td><strong>1.3.4</strong></td>
+<td><strong>Módulo de Facturación y Control de Insumos</strong></td>
+<td>60-80h</td>
+<td>Dev Backend</td>
+<td>1.3.1, 1.3.3</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.3.5</strong></td>
+<td><strong>Módulo de Control de Inventario y Alertas</strong></td>
+<td>40-60h</td>
+<td>Dev Fullstack</td>
+<td>1.3.4</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.5.3</strong></td>
+<td><strong>Integración de Pasarelas de Pago y Mensajería</strong></td>
+<td>40-60h</td>
+<td>Dev Backend</td>
+<td>1.3.4</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sprint 9 (Semana 17-18)</strong></td>
+<td><strong>1.6.2</strong></td>
+<td><strong>Pruebas de Rendimiento, Carga y Concurrencia</strong> (SLA P95)</td>
+<td>40-60h</td>
+<td>Especialista Performance</td>
+<td>1.3.1 a 1.3.5</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.6.3</strong></td>
+<td><strong>Pruebas de Seguridad, Penetración y Aislamiento Tenant</strong> (Pentest)</td>
+<td>40h</td>
+<td>Auditor Seguridad</td>
+<td>1.5.1</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.6.4</strong></td>
+<td><strong>Pruebas de Aceptación de Usuario</strong> (UAT Clínicas Piloto)</td>
+<td>60-80h</td>
+<td>Líder QA / Usuarios</td>
+<td>1.3.1 a 1.3.5</td>
+</tr>
+<tr>
+<td><strong>Hito 6</strong></td>
+<td><strong>S9 (Fin)</strong></td>
+<td><strong>Certificación de QA Final y Criterios de SLA</strong></td>
+<td><strong>—</strong></td>
+<td><strong>Líder QA</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3><strong>FASE 4: TRANSICIÓN Y DESPLIEGUE (Sprint 10)</strong></h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ubicación Temporada</strong></td>
+<td><strong>Cód. EDT</strong></td>
+<td><strong>Nombre del Paquete de Trabajo (Entregable)</strong></td>
+<td><strong>Duración Estimada (h)</strong></td>
+<td><strong>Responsable</strong></td>
+<td><strong>Dependencias</strong></td>
+</tr>
+<tr>
+<td><strong>Sprint 10 (Semana 19-20)</strong></td>
+<td><strong>1.7.1</strong></td>
+<td><strong>Infraestructura Cloud y Pipeline CI/CD</strong> (Producción)</td>
+<td>40h</td>
+<td>DevOps Engineer</td>
+<td>1.2.2</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.7.2</strong></td>
+<td><strong>Utilitarios de Migración de Datos Legados</strong></td>
+<td>32-40h</td>
+<td>Ing. de Datos</td>
+<td>1.2.3, Hito 6</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.7.3</strong></td>
+<td><strong>Material de Capacitación y Manuales Operativos</strong></td>
+<td>40h</td>
+<td>Especialista Capacitación</td>
+<td>1.2.4</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>1.7.4</strong></td>
+<td><strong>Marcha Blanca y Salida a Producción (Go-Live)</strong> (Puesta en marcha)</td>
+<td>80h (S20 completo)</td>
+<td>PM / Dev / DevOps</td>
+<td>Hito 6, 1.7.1, 1.7.2</td>
+</tr>
+<tr>
+<td><strong>Hito Final</strong></td>
+<td><strong>S20 (Fin)</strong></td>
+<td><strong>PLATAFORMA INTEGRAL VETERISOFT GO-LIVE</strong></td>
+<td><strong>—</strong></td>
+<td><strong>Comité Dirección</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Post-Proyecto</strong></td>
+<td><strong>1.1.4</strong></td>
+<td><strong>Cierre Contractual y Transferencia</strong></td>
+<td>16-24h</td>
+<td>PM</td>
+<td>1.7.4</td>
+</tr>
+</tbody>
+</table></div>
+</article></main></div></body></html>

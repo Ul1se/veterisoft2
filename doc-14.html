@@ -1,0 +1,954 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gestión de Adquisiciones — Selección y Evaluación de Proveedores (Simulación) - VeteriSoft · VeteriSoft</title><link rel="stylesheet" href="style.css"><script src="search-data.js" defer></script><script src="app.js" defer></script></head><body><header><a href="index.html" class="brand"><span>V+</span> VeteriSoft</a><span class="header-label">/ &nbsp; Documentación</span><div class="search"><input id="search" type="search" placeholder="Buscar en 13 documentos…" aria-label="Buscar en la documentación"><div id="results" aria-live="polite" hidden></div></div></header><div class="layout"><aside><details open><summary>Biblioteca del proyecto</summary><nav aria-label="Documentos"><a class="start" href="index.html">⌂ &nbsp; Centro de proyecto</a><div class="group">Dirección y alcance</div><a href="doc-01.html">ACTA DE CONSTITUCIÓN DEL PROYECTO</a><a href="doc-02.html">SCOPE STATMENT</a><a href="doc-03.html">WBS-EDT</a><a href="doc-05.html">PLANES DEL PROYECTO</a><div class="group">Requisitos y calidad</div><div class="group">Planificación y seguimiento</div><a href="doc-09.html">TIEMPOS</a><a href="doc-10.html">COSTOS</a><a href="doc-11.html">RIESGOS</a><a href="doc-12.html">GESTIÓN DE COMUNICACIONES Y STAKEHOLDERS</a><a href="doc-13.html">JIRA</a><div class="group">Procesos de gestión</div><a href="doc-14.html" aria-current="page">Gestión de Adquisiciones — Selección y Evaluación de Proveedores (Simulación) - VeteriSoft</a><a href="doc-15.html">Gestión y Control de Cambios - VeteriSoft (Simulación)</a><a href="doc-17.html">Diferencias entre PMBOK 6ta E, ISO 21500-2012, PMBOK 7ma e ISO 21500-2021 y Metodología Prince2</a></nav></details></aside><main><div class="docbar"><span>DOCUMENTACIÓN / 11 DE 13</span><a href="originales/doc-14.md" download>↓ Markdown original</a></div><article><h1>Gestión de Adquisiciones — Selección y Evaluación de Proveedores (Simulación) | VeteriSoft</h1>
+<h1>Gestión de Adquisiciones y Evaluación de Proveedores — VeteriSoft</h1>
+<p><strong>Ingeniería de Software II · Documento de proyecto · Versión 1.0 · 27/10/2026</strong></p>
+<p><strong>SIMULACIÓN ACADÉMICA:</strong> nombres comerciales, ofertas, costos, SLA, incidentes, aprobaciones y resultados de compra son ficticios. No existe evidencia de contratos reales con los proveedores de ejemplo. Las responsabilidades funcionales y umbrales son propuestas sujetas a aprobación del proyecto.</p>
+<h2>1. Objetivo, alcance y justificación</h2>
+<p>Establecer un proceso controlado y trazable para solicitar, comparar, seleccionar, contratar, recibir, monitorear y reevaluar proveedores de bienes y servicios que necesita VeteriSoft, priorizando infraestructura de hosting, backend, base de datos, almacenamiento, seguridad y soporte. El propósito es garantizar continuidad del SaaS multitenant y proteger datos clínicos sin superar el presupuesto aprobado.</p>
+<p>Se conecta con la EDT (arquitectura SaaS, seguridad, QA y despliegue), la matriz de costos y la matriz de riesgos del proyecto. La integración con pasarelas de pago reales figura fuera del MVP en el acta; por eso no se incorpora como compra obligatoria de este caso.</p>
+<h2>2. Anotaciones del proyecto incorporadas</h2>
+<p>Esta página recoge los puntos de clase compartidos: roles y puestos; descripción de tareas; experiencia, conocimientos, educación y habilidades requeridas; competencias y mejora; gestión de adquisiciones; objetivos SMART; roles y montos de aprobación; solicitud, selección, compra, contrato, recepción, devoluciones, evaluación del proveedor y cierre; criterios ponderados (disponibilidad, calidad técnica, costo total, soporte y probabilidad de cumplimiento); acuerdos con métricas, mínimos, medición y acciones por incumplimiento; responsabilidades, escalamiento de incidentes; clasificación verde/amarillo/rojo y termómetro de proveedores.</p>
+<h2>3. Roles y autorización de compras</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Rol / puesto</th>
+<th>Responsabilidad y tarea</th>
+<th>Competencia requerida</th>
+<th>Registro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solicitante técnico (función)</td>
+<td>Identificar necesidad, especificaciones, estimación y criterios</td>
+<td>Conocimiento técnico del rubro y estimación de recursos</td>
+<td>Solicitud de adquisición</td>
+</tr>
+<tr>
+<td>Responsable de compras (función)</td>
+<td>Buscar candidatos, solicitar cotizaciones y comparar ofertas</td>
+<td>Evaluación económica, negociación y análisis de riesgos</td>
+<td>Cuadro comparativo</td>
+</tr>
+<tr>
+<td>PM / director: Augusto Paz (rol documentado)</td>
+<td>Coordinar planificación, revisar riesgos, solicitar aprobaciones y monitorear cumplimiento</td>
+<td>Gestión de proyecto, costos y proveedores</td>
+<td>Acta de selección y seguimiento</td>
+</tr>
+<tr>
+<td>Patrocinador / aprobador presupuestario (función)</td>
+<td>Autorizar compromiso económico según delegación</td>
+<td>Presupuesto, contratos y gestión de riesgos</td>
+<td>Aprobación escrita</td>
+</tr>
+<tr>
+<td>Responsable técnico / QA (función)</td>
+<td>Verificar entrega, SLA, seguridad y aceptación</td>
+<td>Infraestructura, pruebas y seguridad</td>
+<td>Acta de recepción y evaluación</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ramiro Fernández y Ulises Tobares figuran como colaboradores en el acta. No se presume que tengan asignado formalmente el rol de compras o QA: la asignación debe registrarse antes de ejecutar el proceso.</p>
+<h3>3.1 Niveles de aprobación propuestos (no vigentes)</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Monto total estimado</th>
+<th>Autoriza</th>
+<th>Condición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hasta USD 100</td>
+<td>PM, si existe delegación expresa</td>
+<td>Compra dentro de presupuesto</td>
+</tr>
+<tr>
+<td>USD 100,01–500</td>
+<td>PM + patrocinador</td>
+<td>Comparación de al menos 2 ofertas</td>
+</tr>
+<tr>
+<td>Más de USD 500</td>
+<td>Patrocinador / responsable presupuestario</td>
+<td>Al menos 3 ofertas y justificación formal</td>
+</tr>
+<tr>
+<td>Cualquier monto de servicio crítico o datos sensibles</td>
+<td>Patrocinador + validación técnica y de seguridad</td>
+<td>Evaluación de riesgos y acuerdo de servicio</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los umbrales son una propuesta para el trabajo práctico; no representan una política aprobada de VeteriSoft. No debe fraccionarse una compra para evitar aprobaciones.</p>
+<h2>4. Flujo del proceso de compra</h2>
+<ol>
+<li><strong>Necesidad:</strong> identificar bien o servicio, justificación, EDT, fecha y presupuesto.</li>
+<li><strong>Solicitud:</strong> cargar requisición con especificación técnica, cantidad, criticidad y responsable.</li>
+<li><strong>Investigación:</strong> elaborar lista de proveedores por rubro y solicitar cotizaciones comparables.</li>
+<li><strong>Preselección:</strong> comprobar requisitos excluyentes (seguridad, continuidad, soporte y cumplimiento).</li>
+<li><strong>Evaluación:</strong> puntuar criterios ponderados y riesgos; documentar evidencia de cada puntaje.</li>
+<li><strong>Selección y aprobación:</strong> recomendar la mejor oferta admisible y obtener autorización según monto.</li>
+<li><strong>Contratación y pedido:</strong> emitir orden de compra / contrato con alcance, SLA, costos y responsabilidades.</li>
+<li><strong>Recepción:</strong> comprobar acceso, capacidad, seguridad y pruebas de aceptación.</li>
+<li><strong>Operación:</strong> medir servicio, registrar incidentes, reclamos, devoluciones o créditos.</li>
+<li><strong>Evaluación posterior y cierre:</strong> comparar resultado con lo contratado, documentar conformidad y actualizar padrón.</li>
+</ol>
+<h2>5. Registro de proveedores por rubro</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Rubro</th>
+<th>Qué se contrata</th>
+<th>Requisitos principales</th>
+<th>Ejemplo de candidatos ficticios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hosting / infraestructura</td>
+<td>Servidor de aplicación y despliegue</td>
+<td>Disponibilidad, seguridad, escalado y soporte</td>
+<td>Nube Andina, Cloud Sur, Infra Vet</td>
+</tr>
+<tr>
+<td>Base de datos gestionada</td>
+<td>Motor relacional, backups y restauración</td>
+<td>Aislamiento, cifrado, RPO/RTO y exportación</td>
+<td>DB Clínica, Datos Sur</td>
+</tr>
+<tr>
+<td>Almacenamiento</td>
+<td>Archivos y adjuntos clínicos</td>
+<td>Cifrado, retención, costos de egreso y redundancia</td>
+<td>Archivo Nube, Object Sur</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td>Auditoría y pruebas de penetración</td>
+<td>Alcance, confidencialidad e informe reproducible</td>
+<td>Secura Lab, AuditTech</td>
+</tr>
+<tr>
+<td>Notificaciones</td>
+<td>Mensajería de turnos y recordatorios</td>
+<td>Entrega, costo por envío y privacidad</td>
+<td>Mensaje Sur, AvisoCloud</td>
+</tr>
+</tbody>
+</table></div>
+<p>Todos los nombres de esta tabla son etiquetas ficticias para la simulación; no identifican ofertas comerciales verificadas.</p>
+<h2>6. Caso práctico: selección de hosting, backend y base de datos</h2>
+<p><strong>Solicitud simulada SOL-ADQ-001:</strong> contratar durante 12 meses una solución que permita alojar el backend y la base de datos del MVP con respaldos, métricas, aislamiento de clínicas, soporte y despliegue controlado. El ejemplo presupone un contrato de infraestructura anual; no se deriva de una cotización real.</p>
+<h3>6.1 Restricciones, supuestos y requisitos excluyentes</h3>
+<ul>
+<li><strong>Supuestos:</strong> demanda moderada de clínica piloto, crecimiento progresivo, precios en USD y horizonte de 12 meses.</li>
+<li><strong>Restricciones:</strong> presupuesto sujeto a aprobación; protección de historias clínicas y separación multitenant; cronograma del MVP.</li>
+<li><strong>Riesgos:</strong> caída del servicio, filtración entre clínicas, sobrecostos de almacenamiento, dependencia del proveedor y demoras de soporte.</li>
+<li><strong>Requisitos mínimos propuestos:</strong> disponibilidad mensual ≥99,9 %, respaldos diarios, cifrado en tránsito y reposo, control de acceso, exportación de datos, notificación de incidentes críticos y pruebas de restauración. Una oferta que incumpla un requisito excluyente no se adjudica aunque obtenga mayor puntaje.</li>
+</ul>
+<h3>6.2 Criterios y ponderación</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Peso</th>
+<th>Qué se mide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disponibilidad</td>
+<td>25 %</td>
+<td>SLA, redundancia e historial de interrupciones</td>
+</tr>
+<tr>
+<td>Calidad técnica y seguridad</td>
+<td>25 %</td>
+<td>Compatibilidad, backups, cifrado, aislamiento y restauración</td>
+</tr>
+<tr>
+<td>Costo total</td>
+<td>20 %</td>
+<td>Suscripción, puesta en marcha, almacenamiento y egreso</td>
+</tr>
+<tr>
+<td>Soporte y SLA</td>
+<td>15 %</td>
+<td>Canales, tiempos de respuesta y escalamiento</td>
+</tr>
+<tr>
+<td>Riesgo / continuidad</td>
+<td>10 %</td>
+<td>Probabilidad de fallas, dependencia y recuperación</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td>5 %</td>
+<td>Capacidad de crecer sin rediseño</td>
+</tr>
+</tbody>
+</table></div>
+<p>Escala de 1 a 5: 1 deficiente, 2 bajo, 3 aceptable, 4 bueno, 5 excelente. <strong>Puntaje ponderado = Σ (puntaje del criterio × peso/100)</strong>, máximo 5. El costo recibe mayor puntaje cuanto menor sea el costo total comparable, sin sustituir el filtro técnico.</p>
+<h3>6.3 Cuadro comparativo de cotizaciones simuladas</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Proveedor ficticio</th>
+<th>Mensual USD</th>
+<th>Implementación USD</th>
+<th>TCO 12 meses USD</th>
+<th>Resultado / 5</th>
+<th>Semáforo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nube Andina (ficticio)</td>
+<td>185</td>
+<td>150</td>
+<td>2370</td>
+<td><strong>4.05</strong></td>
+<td>🟢 Verde</td>
+</tr>
+<tr>
+<td>Cloud Sur (ficticio)</td>
+<td>155</td>
+<td>120</td>
+<td>1980</td>
+<td><strong>4.25</strong></td>
+<td>🟢 Verde</td>
+</tr>
+<tr>
+<td>Infra Vet (ficticio)</td>
+<td>95</td>
+<td>80</td>
+<td>1220</td>
+<td><strong>3.30</strong></td>
+<td>🟡 Amarillo</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fórmula de TCO del ejemplo = 12 × tarifa mensual + costo de implementación. No incluye impuestos, variación cambiaria, consumo extraordinario ni egresos de datos; deben cotizarse antes de una compra real.</p>
+<h3>6.4 Detalle de la matriz ponderada</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Proveedor</th>
+<th>Disponibilidad (25%)</th>
+<th>Calidad técnica y seguridad (25%)</th>
+<th>Costo total (20%)</th>
+<th>Soporte y SLA (15%)</th>
+<th>Riesgo / continuidad (10%)</th>
+<th>Escalabilidad (5%)</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nube Andina (ficticio)</td>
+<td>5/5</td>
+<td>4/5</td>
+<td>3/5</td>
+<td>4/5</td>
+<td>4/5</td>
+<td>4/5</td>
+<td><strong>4.05</strong></td>
+</tr>
+<tr>
+<td>Cloud Sur (ficticio)</td>
+<td>4/5</td>
+<td>5/5</td>
+<td>4/5</td>
+<td>4/5</td>
+<td>4/5</td>
+<td>4/5</td>
+<td><strong>4.25</strong></td>
+</tr>
+<tr>
+<td>Infra Vet (ficticio)</td>
+<td>3/5</td>
+<td>3/5</td>
+<td>5/5</td>
+<td>3/5</td>
+<td>2/5</td>
+<td>3/5</td>
+<td><strong>3.30</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Resultado de selección simulado:</strong> Cloud Sur (ficticio) presenta el mayor puntaje ponderado de esta matriz. La recomendación es <strong>condicional</strong> a validar los requisitos excluyentes y obtener la aprobación presupuestaria. Un proveedor de menor precio no resulta automáticamente mejor si eleva riesgos de disponibilidad y seguridad.</p>
+<h3>6.5 Termómetro de proveedores</h3>
+<p>🟢 <strong>Verde:</strong> puntaje ≥4,00 y sin incumplimientos críticos: candidato preferente. 🟡 <strong>Amarillo:</strong> 3,00–3,99: requiere plan de mitigación. 🔴 <strong>Rojo:</strong> menor a 3,00 o incumplimiento excluyente: no adjudicar hasta resolver. El semáforo es una regla propuesta para este ejercicio.</p>
+<h2>7. Documento de solicitud y orden de compra simulada</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solicitud</td>
+<td>SOL-ADQ-001</td>
+</tr>
+<tr>
+<td>Solicitante</td>
+<td>Responsable técnico (por designar)</td>
+</tr>
+<tr>
+<td>Proyecto / EDT</td>
+<td>VeteriSoft — plataforma SaaS / despliegue</td>
+</tr>
+<tr>
+<td>Objeto</td>
+<td>Hosting backend y base de datos, backups y soporte por 12 meses</td>
+</tr>
+<tr>
+<td>Proveedor recomendado</td>
+<td>Cloud Sur (ficticio) (ficticio)</td>
+</tr>
+<tr>
+<td>Importe base simulado</td>
+<td>USD 1980 / 12 meses</td>
+</tr>
+<tr>
+<td>Responsable de aprobación</td>
+<td>Patrocinador / autoridad presupuestaria</td>
+</tr>
+<tr>
+<td>Estado</td>
+<td>Ejemplo — sin aprobación ni orden real emitida</td>
+</tr>
+</tbody>
+</table></div>
+<h2>8. Acuerdo de nivel de servicio (SLA) propuesto</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Nivel mínimo</th>
+<th>Medición</th>
+<th>Acción ante incumplimiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disponibilidad mensual</td>
+<td>≥99,9 %</td>
+<td>Monitoreo externo cada 5 min y reporte mensual</td>
+<td>Ticket, análisis de causa, crédito contractual y plan correctivo</td>
+</tr>
+<tr>
+<td>Respuesta a incidente crítico P1</td>
+<td>≤30 min</td>
+<td>Hora de apertura y primera respuesta humana</td>
+<td>Escalar al responsable de guardia y PM</td>
+</tr>
+<tr>
+<td>Restablecimiento objetivo P1</td>
+<td>≤4 h</td>
+<td>Tiempo desde declaración hasta recuperación</td>
+<td>Activar contingencia y revisión ejecutiva</td>
+</tr>
+<tr>
+<td>RPO de base de datos</td>
+<td>≤24 h</td>
+<td>Fecha del último punto recuperable</td>
+<td>Verificar backups y corregir configuración</td>
+</tr>
+<tr>
+<td>RTO de recuperación</td>
+<td>≤8 h</td>
+<td>Simulacro de restauración trimestral</td>
+<td>Plan de recuperación y nueva prueba</td>
+</tr>
+<tr>
+<td>Notificación de incidente de seguridad</td>
+<td>≤1 h desde detección</td>
+<td>Registro de alerta y comunicación</td>
+<td>Escalamiento inmediato a seguridad y PM</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los valores son <strong>objetivos contractuales propuestos</strong> y deben ser negociados, no promesas de proveedores reales. Disponibilidad 99,9 % en un mes de 30 días equivale aproximadamente a 43,2 minutos de indisponibilidad admitida.</p>
+<h2>9. Responsabilidades y escalamiento de incidentes</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Severidad</th>
+<th>Ejemplo</th>
+<th>Responsable inicial</th>
+<th>Escalamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 — Crítica</td>
+<td>Caída total o exposición de datos entre clínicas</td>
+<td>Soporte proveedor + responsable técnico</td>
+<td>Inmediato a PM y patrocinador; activar contingencia</td>
+</tr>
+<tr>
+<td>P2 — Alta</td>
+<td>Degradación grave de agenda o historial clínico</td>
+<td>Soporte técnico</td>
+<td>PM si no hay progreso dentro de 2 h</td>
+</tr>
+<tr>
+<td>P3 — Media</td>
+<td>Intermitencia no bloqueante</td>
+<td>Mesa de ayuda</td>
+<td>Responsable técnico en revisión diaria</td>
+</tr>
+<tr>
+<td>P4 — Baja</td>
+<td>Consulta o mejora menor</td>
+<td>Soporte habitual</td>
+<td>Revisión de servicio periódica</td>
+</tr>
+</tbody>
+</table></div>
+<p>El contrato debe distinguir obligaciones del proveedor (infraestructura, SLA, soporte, restauración según alcance) y del equipo VeteriSoft (código, configuración, usuarios, pruebas de aceptación y notificación de fallas propias).</p>
+<h2>10. Recepción, devoluciones y evaluación posterior a la compra</h2>
+<p><strong>Recepción simulada:</strong> comprobar acceso a consola, despliegue de prueba, conectividad de base de datos, respaldo/restauración, permisos y monitoreo. Documentar conformidad o no conformidad en acta REC-001. Para servicios digitales, la «devolución» puede consistir en corrección, crédito de servicio, rescisión y migración; no necesariamente devolución física.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Control posterior</th>
+<th>Resultado ficticio del mes 1</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disponibilidad</td>
+<td>99,95 %</td>
+<td>Conforme al objetivo</td>
+</tr>
+<tr>
+<td>Primera respuesta P1</td>
+<td>20 minutos en incidente de simulacro</td>
+<td>Conforme</td>
+</tr>
+<tr>
+<td>Restauración de backup</td>
+<td>7 horas en prueba controlada</td>
+<td>Conforme al RTO propuesto</td>
+</tr>
+<tr>
+<td>Costo mensual</td>
+<td>USD 155</td>
+<td>Sin desvío en la simulación</td>
+</tr>
+<tr>
+<td>Observación del equipo</td>
+<td>Documentación inicial mejorable</td>
+<td>Solicitar guía de recuperación y actualizar registro</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Evaluación simulada:</strong> se mantiene al proveedor bajo seguimiento. Si la disponibilidad cae por debajo de 99,9 %, se abre una no conformidad, se solicita plan correctivo y se reevalúa al mes siguiente. Incumplimientos reiterados pueden motivar reemplazo sujeto al contrato.</p>
+<h2>11. Objetivo SMART de adquisiciones</h2>
+<p><strong>Específico:</strong> seleccionar y contratar infraestructura para backend y base de datos del MVP. <strong>Medible:</strong> evaluar al menos 3 cotizaciones con matriz ponderada, verificar 100 % de requisitos excluyentes y registrar la aprobación. <strong>Alcanzable:</strong> utilizar el equipo y presupuesto asignados. <strong>Relevante:</strong> asegurar operación y continuidad de VeteriSoft. <strong>Temporal:</strong> completar selección y autorización dentro de 2 semanas desde la requisición aprobada (plazo propuesto).</p>
+<h2>12. Registros y documentos resultantes</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>ID de ejemplo</th>
+<th>Registro</th>
+<th>Etapa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SOL-ADQ-001</td>
+<td>Solicitud de adquisición</td>
+<td>Inicio</td>
+</tr>
+<tr>
+<td>RFP-001</td>
+<td>Solicitud de cotizaciones y especificaciones</td>
+<td>Investigación</td>
+</tr>
+<tr>
+<td>EVA-PROV-001</td>
+<td>Matriz comparativa y evaluación de riesgos</td>
+<td>Selección</td>
+</tr>
+<tr>
+<td>APR-001</td>
+<td>Acta de aprobación</td>
+<td>Autorización</td>
+</tr>
+<tr>
+<td>OC-001 / SLA-001</td>
+<td>Orden de compra y acuerdo de servicio</td>
+<td>Contratación</td>
+</tr>
+<tr>
+<td>REC-001</td>
+<td>Acta de recepción y pruebas</td>
+<td>Entrega</td>
+</tr>
+<tr>
+<td>INC-001</td>
+<td>Incidencias y escalamiento</td>
+<td>Operación</td>
+</tr>
+<tr>
+<td>EVP-001 / CIE-001</td>
+<td>Evaluación posterior y cierre</td>
+<td>Seguimiento y cierre</td>
+</tr>
+</tbody>
+</table></div>
+<h2>13. Fuentes y relación con otros documentos</h2>
+<ul>
+<li><a href="doc-01.html">Acta de Constitución — alcance y restricciones</a></li>
+<li><a href="doc-03.html">EDT / WBS — actividades y entregables</a></li>
+<li><a href="doc-10.html">Matriz de Costes — presupuesto y contingencias</a></li>
+<li><a href="doc-11.html">Matriz de Riesgos — continuidad y seguridad</a></li>
+<li><a href="doc-12.html">Comunicaciones y Stakeholders</a></li>
+</ul>
+<h2>14. Adecuación a la consigna oficial — Práctico N.º 8 (2026)</h2>
+<p><strong>Propósito de esta ampliación:</strong> completar explícitamente los seis puntos de la consigna «Gestión de adquisiciones». Se conserva el análisis de proveedores y el caso de hosting de las secciones anteriores. <strong>Todo presupuesto, fecha, contrato, cotización, aprobación y recepción descritos a continuación es simulado o propuesto</strong>; no constituye compra ejecutada.</p>
+<h3>14.1 Punto 1 — Análisis fabricar o adquirir (make-or-buy)</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Producto o servicio</th>
+<th>Decisión</th>
+<th>Justificación</th>
+<th>Relación con el proyecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gestión de usuarios, mascotas y roles</td>
+<td>Desarrollar internamente</td>
+<td>Contiene reglas propias del negocio y control de acceso entre clínicas; requiere integración directa</td>
+<td>MVP / núcleo de aplicación</td>
+</tr>
+<tr>
+<td>Agenda de turnos</td>
+<td>Desarrollar internamente</td>
+<td>Debe ajustarse al flujo de recepción y veterinarios y evitar colisiones</td>
+<td>MVP / agenda</td>
+</tr>
+<tr>
+<td>Historia clínica electrónica</td>
+<td>Desarrollar internamente</td>
+<td>Necesita trazabilidad, confidencialidad y modelo clínico específico</td>
+<td>MVP / HCE</td>
+</tr>
+<tr>
+<td>Frontend web responsivo y APIs</td>
+<td>Desarrollar internamente</td>
+<td>Es la funcionalidad diferenciadora y debe seguir la arquitectura de VeteriSoft</td>
+<td>Arquitectura / frontend y backend</td>
+</tr>
+<tr>
+<td>Infraestructura cloud y base de datos alojada</td>
+<td>Adquirir servicio externo</td>
+<td>Reduce inversión inicial en servidores y facilita escalado, respaldos y disponibilidad</td>
+<td>EDT 1.5 / 1.7</td>
+</tr>
+<tr>
+<td>Almacenamiento de adjuntos</td>
+<td>Adquirir servicio externo</td>
+<td>Se necesita capacidad variable, redundancia y políticas de retención</td>
+<td>EDT 1.5</td>
+</tr>
+<tr>
+<td>Auditoría de seguridad especializada</td>
+<td>Adquirir servicio externo, sujeto a presupuesto</td>
+<td>Proporciona revisión independiente del aislamiento multitenant</td>
+<td>EDT 1.5.1 / 1.6</td>
+</tr>
+<tr>
+<td>Mensajería para recordatorios</td>
+<td>Adquirir servicio por consumo, si se habilita en el alcance</td>
+<td>La entrega a terceros requiere red de mensajería y evita construir infraestructura propia</td>
+<td>Requisito de recordatorios</td>
+</tr>
+<tr>
+<td>Control de versiones y gestión documental</td>
+<td>Utilizar servicios disponibles</td>
+<td>GitHub y Confluence ya forman parte del trabajo del proyecto; cualquier costo adicional se evaluará por separado</td>
+<td>Gestión y documentación</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Distinción:</strong> adquirir hosting o base de datos gestionada no implica tercerizar el desarrollo del backend ni la propiedad de la lógica clínica. Las herramientas ya utilizadas no se declaran automáticamente compras nuevas.</p>
+<h2>15. Punto 2 — Matriz integral de adquisiciones a terceros</h2>
+<p><strong>Planificación temporal:</strong> se expresan fechas relativas a hitos del proyecto porque no se ha acreditado un cronograma de adquisiciones aprobado. S = sprint. Los montos en USD son estimaciones académicas ficticias, sin impuestos, cambio de moneda ni cotizaciones reales. Deben validarse con la matriz de costos antes de autorizarse.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Ítem y servicio</th>
+<th>EDT / requisito</th>
+<th>Contrato / modalidad</th>
+<th>Proveedores candidatos ficticios</th>
+<th>Responsable</th>
+<th>Costo estimado</th>
+<th>Fecha requerida</th>
+<th>Planificación</th>
+<th>Cierre previsto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADQ-01 · Hosting backend + base de datos gestionada</td>
+<td>1.5 / 1.7; disponibilidad y aislamiento</td>
+<td>Suscripción 12 meses con SLA</td>
+<td>Cloud Sur, Nube Andina, Infra Vet</td>
+<td>PM coordina; técnico verifica; patrocinador aprueba</td>
+<td>USD 1.980 / año (opción simulada)</td>
+<td>Antes de integración y pruebas de despliegue; referencia S4</td>
+<td>Requisición → 3 cotizaciones → matriz → aprobación → contrato → prueba</td>
+<td>Servicio habilitado, backup probado, SLA aceptado y acta de recepción</td>
+</tr>
+<tr>
+<td>ADQ-02 · Almacenamiento de adjuntos</td>
+<td>1.5; archivos clínicos</td>
+<td>Pago por uso con tope y alertas</td>
+<td>Archivo Nube, Object Sur</td>
+<td>Responsable técnico (por asignar); PM</td>
+<td>USD 25/mes × 12 = 300</td>
+<td>Antes de pruebas con adjuntos; referencia S6</td>
+<td>Estimar volumen → comparar costo/egreso → aprobar → configurar</td>
+<td>Cifrado, permisos y carga/descarga probados; costo controlado</td>
+</tr>
+<tr>
+<td>ADQ-03 · Auditoría de seguridad</td>
+<td>1.5.1 / 1.6; protección multitenant</td>
+<td>Precio fijo por entregable</td>
+<td>Secura Lab, AuditTech</td>
+<td>PM; revisor de seguridad (por asignar)</td>
+<td>USD 600 por auditoría</td>
+<td>Antes de liberación piloto; referencia S12</td>
+<td>Definir alcance → RFP → comparar → contratar → ejecutar</td>
+<td>Informe recibido, hallazgos críticos resueltos y validación de correcciones</td>
+</tr>
+<tr>
+<td>ADQ-04 · Servicio de notificaciones</td>
+<td>Requisito de recordatorios</td>
+<td>Pago por consumo</td>
+<td>Mensaje Sur, AvisoCloud</td>
+<td>Responsable técnico (por asignar); PM</td>
+<td>USD 20/mes × 12 = 240</td>
+<td>Antes de pruebas de recordatorios; referencia S9</td>
+<td>Estimar envíos → comparar precio/entrega → integrar sandbox → aprobar</td>
+<td>Pruebas de entrega, consentimiento y registro de costos</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Total ilustrativo anual:</strong> USD 3.120, sumando ADQ-01 a ADQ-04 y suponiendo 12 meses de consumo en ADQ-02 y ADQ-04. Es un escenario de planeación, <strong>no un gasto autorizado</strong>. La contratación real puede variar según el alcance, el cronograma y las licencias ya disponibles. Evitar duplicar estos montos con partidas existentes de la matriz de costos.</p>
+<h2>16. Punto 3 — Simulación del proceso de compra ADQ-01 de principio a fin</h2>
+<p><strong>Compra elegida:</strong> hosting de backend y base de datos gestionada. <strong>Inicio propuesto:</strong> al aprobar la arquitectura de despliegue, capacidad mínima y presupuesto; idealmente dos semanas antes de la fecha requerida para las pruebas de integración (referencia S4). <strong>Dependencias:</strong> diseño de arquitectura, requisitos de seguridad, proyección de consumo y autorización económica.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Actividades concretas</th>
+<th>Responsable</th>
+<th>Documento o registro resultante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Identificación</td>
+<td>Definir necesidad, riesgos de indisponibilidad y requisitos técnicos</td>
+<td>Responsable técnico + PM</td>
+<td>Ficha de necesidad ADQ-01</td>
+</tr>
+<tr>
+<td>2. Solicitud</td>
+<td>Especificar capacidad, backups, soporte, seguridad, plazo y presupuesto</td>
+<td>Solicitante técnico</td>
+<td>SOL-ADQ-001 / especificación técnica</td>
+</tr>
+<tr>
+<td>3. Investigación</td>
+<td>Identificar candidatos y pedir propuestas equivalentes</td>
+<td>Responsable de compras (función por designar)</td>
+<td>RFP-001 y registro de cotizaciones</td>
+</tr>
+<tr>
+<td>4. Evaluación</td>
+<td>Aplicar filtros excluyentes y puntuación ponderada</td>
+<td>Responsable técnico + PM</td>
+<td>EVA-PROV-001 / matriz de comparación</td>
+</tr>
+<tr>
+<td>5. Selección</td>
+<td>Justificar proveedor recomendado y revisar riesgos y TCO</td>
+<td>PM</td>
+<td>Informe de recomendación</td>
+</tr>
+<tr>
+<td>6. Aprobación</td>
+<td>Comprobar disponibilidad presupuestaria y autorizar</td>
+<td>Patrocinador / autoridad delegada</td>
+<td>APR-001 (simulada, no emitida)</td>
+</tr>
+<tr>
+<td>7. Contratación</td>
+<td>Acordar precio, SLA, soporte, pagos, seguridad y terminación</td>
+<td>PM + aprobador</td>
+<td>OC-001 / contrato / SLA-001 (modelos)</td>
+</tr>
+<tr>
+<td>8. Recepción</td>
+<td>Habilitar entorno, probar despliegue, backups, acceso y restauración</td>
+<td>Responsable técnico + QA</td>
+<td>REC-001 y acta de pruebas</td>
+</tr>
+<tr>
+<td>9. Seguimiento</td>
+<td>Medir disponibilidad, costos, incidentes y cumplimiento de SLA</td>
+<td>Responsable técnico + PM</td>
+<td>Reportes mensuales e INC-001</td>
+</tr>
+<tr>
+<td>10. Evaluación y cierre</td>
+<td>Revisar conformidad, resolver reclamos, aprobar factura y archivar documentación</td>
+<td>PM + patrocinador</td>
+<td>EVP-001 y CIE-001</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Resultado simulado:</strong> se emite una recomendación favorable a Cloud Sur, se simula aprobación presupuestaria y se ejecutan pruebas de recepción. Los documentos mencionados son identificadores de registros propuestos, no comprobantes efectivamente existentes.</p>
+<h2>17. Punto 4 — Selección justificada de proveedor</h2>
+<p>La matriz de las secciones 6.2–6.5 compara tres proveedores ficticios, superando el mínimo de dos. Los pesos propuestos suman 100 %: disponibilidad 25 %, calidad técnica y seguridad 25 %, costo total 20 %, soporte y SLA 15 %, riesgo/continuidad 10 % y escalabilidad 5 %. Se prioriza la seguridad y la continuidad porque el sistema procesa historias clínicas y separa datos entre clínicas.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Proveedor</th>
+<th>TCO 12 meses</th>
+<th>Calificación ponderada</th>
+<th>Resultado de selección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloud Sur</td>
+<td>USD 1.980</td>
+<td>4,25 / 5</td>
+<td>Seleccionado en la simulación, sujeto a filtros y autorización</td>
+</tr>
+<tr>
+<td>Nube Andina</td>
+<td>USD 2.370</td>
+<td>4,05 / 5</td>
+<td>Alternativa técnicamente competitiva con mayor costo</td>
+</tr>
+<tr>
+<td>Infra Vet</td>
+<td>USD 1.220</td>
+<td>3,30 / 5</td>
+<td>Menor costo, pero menores puntuaciones en continuidad y soporte</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Justificación:</strong> Cloud Sur combina la puntuación más alta con un costo anual inferior al de Nube Andina. Infra Vet es más económico, pero la matriz simulada asigna menores valores en dimensiones críticas. La adjudicación final depende de comprobar requisitos excluyentes: seguridad, aislamiento, backups, recuperación y SLA. <strong>El semáforo no reemplaza esa verificación.</strong></p>
+<h2>18. Punto 5 — Condiciones del acuerdo, riesgo y seguimiento</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Condición</th>
+<th>Acuerdo propuesto para ADQ-01</th>
+<th>Cómo se controla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objeto y alcance</td>
+<td>Hosting del backend, base de datos gestionada, respaldos y soporte durante 12 meses</td>
+<td>Inventario de servicios y pruebas de aceptación</td>
+</tr>
+<tr>
+<td>Precio</td>
+<td>USD 155 mensuales + USD 120 de puesta en marcha; total base USD 1.980</td>
+<td>Factura y presupuesto mensual; verificar extras</td>
+</tr>
+<tr>
+<td>Pago</td>
+<td>Mensual contra factura y conformidad; instalación tras aceptación inicial</td>
+<td>Comprobante y autorización</td>
+</tr>
+<tr>
+<td>Entrega</td>
+<td>Entorno disponible antes de la prueba de integración prevista</td>
+<td>Acta de habilitación y checklist</td>
+</tr>
+<tr>
+<td>Disponibilidad</td>
+<td>≥99,9 % mensual</td>
+<td>Monitoreo independiente y reporte mensual</td>
+</tr>
+<tr>
+<td>Soporte</td>
+<td>Respuesta inicial P1 ≤30 minutos; escalamiento documentado</td>
+<td>Registro de tickets y tiempos</td>
+</tr>
+<tr>
+<td>Recuperación</td>
+<td>RPO ≤24 h; RTO ≤8 h</td>
+<td>Pruebas de restauración</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td>Cifrado, acceso restringido, notificación de incidentes y exportación de datos</td>
+<td>Checklist de seguridad y pruebas de acceso</td>
+</tr>
+<tr>
+<td>Aceptación</td>
+<td>Despliegue funcional, backup restaurable y requisitos mínimos cumplidos</td>
+<td>REC-001 firmado por revisor autorizado</td>
+</tr>
+<tr>
+<td>Terminación</td>
+<td>Exportación y borrado acordados, devolución de credenciales y cierre de facturas</td>
+<td>Acta de cierre y evidencia de migración</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Riesgo principal:</strong> indisponibilidad o pérdida/exposición de datos. <strong>Prevención:</strong> monitoreo externo, backups y simulacros de restauración, control de accesos y pruebas de aislamiento. <strong>Respuesta:</strong> incidente P1, comunicación inmediata al PM, activación de contingencia y solicitud de análisis de causa al proveedor. <strong>Seguimiento:</strong> reporte mensual de SLA, costos, tickets y acciones correctivas; revisión adicional después de cualquier P1. Se vincula con la matriz de riesgos del proyecto, sin afirmar que estas medidas ya están implementadas.</p>
+<h2>19. Punto 6 — Evaluación de lo recibido y del proveedor</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Aspecto controlado</th>
+<th>Método / criterio</th>
+<th>Responsable funcional</th>
+<th>Registro</th>
+<th>Respuesta ante no conformidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entrega y funcionamiento</td>
+<td>Despliegue, conexión backend-DB y acceso correcto</td>
+<td>Responsable técnico</td>
+<td>Checklist REC-001</td>
+<td>Rechazar recepción hasta corregir</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td>Roles, cifrado y aislamiento entre clínicas</td>
+<td>Revisor de seguridad + QA</td>
+<td>Pruebas y hallazgos</td>
+<td>Bloquear uso productivo y exigir corrección</td>
+</tr>
+<tr>
+<td>Backups y restauración</td>
+<td>Prueba de restauración con RPO/RTO acordados</td>
+<td>Responsable técnico + QA</td>
+<td>Acta de recuperación</td>
+<td>Solicitar nueva prueba y plan correctivo</td>
+</tr>
+<tr>
+<td>Disponibilidad</td>
+<td>≥99,9 % mensual</td>
+<td>PM + responsable técnico</td>
+<td>Reporte SLA</td>
+<td>Ticket, crédito contractual y seguimiento</td>
+</tr>
+<tr>
+<td>Soporte</td>
+<td>Respuesta P1 ≤30 min</td>
+<td>PM</td>
+<td>Registro de tickets</td>
+<td>Escalar a nivel contractual</td>
+</tr>
+<tr>
+<td>Costos</td>
+<td>Facturación según precio y consumos aprobados</td>
+<td>PM + aprobador</td>
+<td>Control de factura</td>
+<td>Reclamar diferencia antes de pago</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Resultado posterior simulado:</strong> disponibilidad 99,95 %, respuesta a P1 en simulacro de 20 minutos y restauración en 7 horas. Se considera conforme con los umbrales propuestos, con una observación de mejora sobre documentación de recuperación. <strong>Acción:</strong> solicitar manual actualizado y verificarlo en la siguiente revisión. Si el proveedor incumple, se registra no conformidad, se establece plazo de corrección, se reevalúa y, ante reiteración, se considera rescisión o sustitución según contrato.</p>
+<h3>19.1 Cierre y evidencia documental</h3>
+<p>El expediente de adquisición se considera cerrado únicamente si consta: solicitud, cotizaciones, matriz comparativa, aprobación, contrato/orden, acta de recepción, evidencia de SLA, tratamiento de incidencias, conformidad económica y evaluación final del proveedor. <strong>En esta simulación se muestra cómo deberían generarse esos registros; no se afirma que existan ni que se haya pagado un servicio.</strong></p>
+<h2>20. Correspondencia con la consigna</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Punto oficial</th>
+<th>Secciones que lo responden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Identificación y decisión desarrollar/adquirir</td>
+<td>14.1</td>
+</tr>
+<tr>
+<td>2. Matriz de adquisiciones</td>
+<td>15</td>
+</tr>
+<tr>
+<td>3. Simulación de proceso, responsables, registros y dependencias</td>
+<td>16</td>
+</tr>
+<tr>
+<td>4. Criterios, comparación y selección</td>
+<td>6 y 17</td>
+</tr>
+<tr>
+<td>5. Acuerdo, riesgo y seguimiento</td>
+<td>8, 9 y 18</td>
+</tr>
+<tr>
+<td>6. Evaluación de recepción y proveedor</td>
+<td>10 y 19</td>
+</tr>
+</tbody>
+</table></div>
+<h2>21. Índice navegable de la consigna</h2>
+<p>Seleccioná un enlace para ir directamente a la sección correspondiente de esta misma página. La tabla original de correspondencia se conserva arriba.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla del documento"><table>
+<thead>
+<tr>
+<th>Punto oficial</th>
+<th>Ir a la respuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Identificación y decisión desarrollar/adquirir</td>
+<td><a href="doc-14.html#141-punto-1-analisis-fabricar-o-adquirir">Ir a sección 14.1</a></td>
+</tr>
+<tr>
+<td>2. Matriz de adquisiciones</td>
+<td><a href="doc-14.html#15-punto-2-matriz-integral-de-adquisiciones-a-terceros">Ir a sección 15</a></td>
+</tr>
+<tr>
+<td>3. Simulación de proceso, responsables, registros y dependencias</td>
+<td><a href="doc-14.html#16-punto-3-simulacion-del-proceso-de-compra-adq-01-de-principio-a-fin">Ir a sección 16</a></td>
+</tr>
+<tr>
+<td>4. Criterios, comparación y selección</td>
+<td><a href="doc-14.html#17-punto-4-seleccion-justificada-de-proveedor">Ir a sección 6 y 17</a></td>
+</tr>
+<tr>
+<td>5. Acuerdo, riesgo y seguimiento</td>
+<td><a href="doc-14.html#18-punto-5-condiciones-del-acuerdo-riesgo-y-seguimiento">Ir a sección 8, 9 y 18</a></td>
+</tr>
+<tr>
+<td>6. Evaluación de recepción y proveedor</td>
+<td><a href="doc-14.html#19-punto-6-evaluacion-de-lo-recibido-y-del-proveedor">Ir a sección 10 y 19</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Nota:</strong> los enlaces utilizan los fragmentos de encabezado de Confluence. Si la interfaz cambia su formato de anclas, se pueden ajustar desde el editor.</p>
+</article></main></div></body></html>
