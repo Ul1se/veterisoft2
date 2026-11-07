@@ -1,10 +1,9 @@
-# VeteriSoft — sitio de documentación
+# VeteriSoft — documentación pública
 
-## Publicar manualmente en GitHub Pages
+Este paquete contiene la portada y los 22 documentos de navegación del proyecto. Las páginas académicas de equipo se anonimizan y los datos privados y la sección editorial retirada no se incluyen.
 
-1. Descomprime el archivo y carga **el contenido** de esta carpeta en la raíz del repositorio.
-2. En GitHub abre **Settings → Pages**.
-3. En **Build and deployment**, selecciona **Deploy from a branch**, rama `main` y carpeta `/(root)`.
-4. Guarda los cambios. GitHub publicará el sitio después de procesar el commit.
+## Publicar en GitHub Pages
 
-El paquete incluye la portada y 12 documentos con sus fuentes Markdown. Se omitieron páginas que no se pudieron autorizar para publicación pública.
+1. Descomprime y sube el contenido de esta carpeta a la raíz del repositorio.
+2. En **Settings → Pages**, elige **Deploy from a branch**.
+3. Selecciona `main` y la carpeta `/(root)`, y guarda.
